@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QDialog" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>653</width>
+    <height>731</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>X-Keys XK-24 Demo</string>
+  </property>
+  <widget class="QPushButton" name="start_button">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>92</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Connect to the first X-Keys device on the system</string>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="stop_button">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>10</y>
+     <width>92</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Disconnect from the X-Keys hardware</string>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="quit_button">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>92</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Exit this Application</string>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="output_box">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>631</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clear_button">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>220</y>
+     <width>92</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Clear the contents of the output box above.</string>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="convert_pid1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>600</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Convert the device to use PID #1</string>
+   </property>
+   <property name="text">
+    <string>Convert to PID #1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="convert_pid2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>570</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Convert the device to use PID #2</string>
+   </property>
+   <property name="text">
+    <string>Convert to PID #2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="timestamp_on">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>670</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Enable timestamp reporting from the device.</string>
+   </property>
+   <property name="text">
+    <string>Time Stamp On</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="timestamp_off">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>670</y>
+     <width>121</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Disable timestamp reporting from the device.</string>
+   </property>
+   <property name="text">
+    <string>Time Stamp Off</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="show_descriptor">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>630</y>
+     <width>131</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Print a description of the device in the output box above.</string>
+   </property>
+   <property name="text">
+    <string>Show Descriptor</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="generate_report">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>630</y>
+     <width>161</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Cause the device to output a data report. This is useful for getting an initial state of the device.</string>
+   </property>
+   <property name="text">
+    <string>Generate Data Report</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="keyboard_reflector">
+   <property name="geometry">
+    <rect>
+     <x>251</x>
+     <y>250</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>After clicking and while reading data, focus on a text input and press first key. Abcd should be typed.</string>
+   </property>
+   <property name="text">
+    <string>Keyboard Reflector</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="joystick_reflector">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>280</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Open Game Controllers control panel to accept commands.  Available in PID#2 only.</string>
+   </property>
+   <property name="text">
+    <string>Joystick Reflector</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="mouse_reflector">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>310</y>
+     <width>141</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Turn Mouse On and while reading data, press first key to behave as left mouse button.  Available for PID #1 only.</string>
+   </property>
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="text">
+    <string>Mouse Reflector</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>570</y>
+     <width>331</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Endpoints: Keyboard, Joystick, Input and Output</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>600</y>
+     <width>311</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Endpoints: Keyboard, Mouse, Input and Output</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>620</y>
+     <width>111</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>(Factory default)</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>LED Controls</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>160</y>
+      <width>59</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Freq</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="flash_green_check">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Flash the Green LED.</string>
+    </property>
+    <property name="text">
+     <string>Flash Green</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="green_check">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Turn on the Green LED.</string>
+    </property>
+    <property name="text">
+     <string>Green</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="red_check">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Turn on the Red LED.</string>
+    </property>
+    <property name="text">
+     <string>Red</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="flash_red_check">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>120</y>
+      <width>121</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Flash the Red LED.</string>
+    </property>
+    <property name="text">
+     <string>Flash Red</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="flash_freq">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>150</y>
+      <width>51</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>The frequency to flash the LEDs and backlight at. This is really a period. Low numbers flash faster; high numbers flash slower.</string>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>420</y>
+     <width>611</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Backlighting</string>
+   </property>
+   <widget class="QCheckBox" name="backlight_bank2_all">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Turn the second (red) backlight on for all keys</string>
+    </property>
+    <property name="text">
+     <string>All Bank 2 On/Off</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="backlight_number">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>20</y>
+      <width>61</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Which key to turn the backlight on and off for using the checkboxes below.
+0-31 are for the first backlight (blue), and 32-60 are for the second backlight (red)</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="backlight_on_off">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Turn the backlight on for the backlight specified in Item Number above.</string>
+    </property>
+    <property name="text">
+     <string>On/Off</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="backlight_flash">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>90</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Flash the backlight specified in Item Number above.</string>
+    </property>
+    <property name="text">
+     <string>Flash</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Index number</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="backlight_bank1_all">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>30</y>
+      <width>141</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Turn the first (blue) backlight on for all keys</string>
+    </property>
+    <property name="text">
+     <string>All Bank 1 On/Off</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="backlight_scroll_lock">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>30</y>
+      <width>101</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Scroll Lock</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backlight_toggle">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>90</y>
+      <width>121</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Toggle the backlight between its current state and all off.</string>
+    </property>
+    <property name="text">
+     <string>Toggle Backlight</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backlight_save">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>90</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Save the current backlighting state of the device as default.</string>
+    </property>
+    <property name="accessibleName">
+     <string/>
+    </property>
+    <property name="text">
+     <string>Save BL State</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backlight_set_intensity">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>60</y>
+      <width>101</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Set the intensity of the backlights to static values.</string>
+    </property>
+    <property name="whatsThis">
+     <string/>
+    </property>
+    <property name="text">
+     <string>Set Intensity</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="mouse_label">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>310</y>
+     <width>71</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mouse Off</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="joystick_label">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>280</y>
+     <width>81</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Joystick Off</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
