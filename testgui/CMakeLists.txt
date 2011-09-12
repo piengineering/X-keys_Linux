@@ -1,5 +1,9 @@
 ######################################################
-# CMake Build Script for X-Keys SDK
+# CMake Build Script for X-Keys GUI Test Program
+#
+# The code may be used by anyone for any purpose,
+# and can serve as a starting point for developing
+# applications using the X-Keys libary.
 #
 # Alan Ott
 # Signal 11 Software
