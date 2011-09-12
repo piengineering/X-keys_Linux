@@ -1,3 +1,13 @@
+/***************************************************
+ X-Keys Test Program
+
+ The code may be used by anyone for any purpose,
+ and can serve as a starting point for developing
+ applications using the X-Keys libary.
+ 
+ Alan Ott
+ Signal 11 Software
+***************************************************/
 
 #include "PieHid32.h"
 #include <unistd.h>
