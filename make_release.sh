@@ -28,14 +28,14 @@ if [ $? -ne 0 ]; then
 fi
 
 
-git archive --format zip --prefix $TAG_NAME/ $TAG_NAME >../$TAG_NAME.zip
+git archive --format tar --prefix $TAG_NAME/ $TAG_NAME |gzip >../$TAG_NAME.tar.gz
 if [ $? -ne 0 ]; then
 	echo Unable to create release archive. Exiting.
 	exit 1;
 fi
 
 echo ""
-echo "Release is located in ../$TAG_NAME.zip"
+echo "Release is located in ../$TAG_NAME.tar.gz"
 echo "Once you have tested it, run"
 echo "    git push origin $TAG_NAME"
 echo "If you want to discard this tag, run"
