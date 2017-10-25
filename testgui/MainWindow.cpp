@@ -1,14 +1,10 @@
-/**************************************************
+/****************************************
  X-Keys Test GUI Main Window
-
- The code may be used by anyone for any purpose,
- and can serve as a starting point for developing
- applications using the X-Keys libary.
  
  Alan Ott
  Signal 11 Software
  2011-08-15
-***************************************************/
+****************************************/
 
 
 #include <Qt>
@@ -22,10 +18,11 @@ MainWindow *g_main_window; // HACK
 MainWindow::MainWindow(QWidget *parent)
 	: QDialog(parent),
 	handle(-1),
-	keyboard(false),
-	joystick(false),
+	thispid(-1),
+	//joystick(false),
 	mouseon(false),
 	lastprogsw(false)
+
 {
 	g_main_window = this; // HACK
 
@@ -42,20 +39,11 @@ MainWindow::MainWindow(QWidget *parent)
 	connect(flash_green_check, SIGNAL(clicked(bool)), this, SLOT(flashGreenCheckClicked(bool)));
 	connect(flash_red_check, SIGNAL(clicked(bool)), this, SLOT(flashRedCheckClicked(bool)));
 	connect(flash_freq, SIGNAL(textChanged(const QString &)), this, SLOT(flashFrequencyChanged(const QString &)));
-
-	// Backlight
-	connect(backlight_on_off, SIGNAL(clicked(bool)), this, SLOT(backlightOnOffClicked(bool)));
-	connect(backlight_flash, SIGNAL(clicked(bool)), this, SLOT(backlightFlashClicked(bool)));
-	connect(backlight_bank1_all, SIGNAL(clicked(bool)), this, SLOT(backlightBank1AllClicked(bool)));
-	connect(backlight_bank2_all, SIGNAL(clicked(bool)), this, SLOT(backlightBank2AllClicked(bool)));
-	connect(backlight_scroll_lock, SIGNAL(clicked(bool)), this, SLOT(backlightScrollLockClicked(bool)));
-	connect(backlight_toggle, SIGNAL(clicked()), this, SLOT(backlightToggle()));
-	connect(backlight_set_intensity, SIGNAL(clicked()), this, SLOT(backlightSetIntensity()));
-	connect(backlight_save, SIGNAL(clicked()), this, SLOT(backlightSave()));
+	connect(unit_id, SIGNAL(clicked()), this, SLOT(unitIDClicked()));
+	connect(individual_led, SIGNAL(clicked()), this, SLOT(individualLEDClicked()));
 
 	// PID controls
 	connect(convert_pid1, SIGNAL(clicked()), this, SLOT(convertPID1Clicked()));
-	connect(convert_pid2, SIGNAL(clicked()), this, SLOT(convertPID2Clicked()));
 	connect(show_descriptor, SIGNAL(clicked()), this, SLOT(showDescriptorClicked()));
 	connect(generate_report, SIGNAL(clicked()), this, SLOT(generateReportClicked()));
 	
@@ -67,7 +55,7 @@ MainWindow::MainWindow(QWidget *parent)
 	connect(keyboard_reflector, SIGNAL(clicked()), this, SLOT(keyboardReflectorClicked()));
 	connect(joystick_reflector, SIGNAL(clicked()), this, SLOT(joystickReflectorClicked()));
 	connect(mouse_reflector, SIGNAL(clicked()), this, SLOT(mouseReflectorClicked()));
-
+	
 	// Connect our append() signal to the output box's append() slot.
 	// This is so we can append to the output box from the callback
 	// thread.
@@ -107,26 +95,20 @@ MainWindow::startButtonClicked(bool)
 		printf("\tUsage:      %04x\n", dev->Usage);
 		printf("\tVersion: %d\n\n", dev->Version);
 
-		if (dev->UP == 0x000c && dev->Usage == 0x0001) {
+		//if (dev->UP == 0x000c && dev->Usage == 0x0001) {
+		if (dev->UP == 0x000c && dev->writeSize > 0) {
 			/* This is the splat interface, */
 
 			handle = dev->Handle;
+			thispid=dev->PID;
 			
 			unsigned int res = SetupInterfaceEx(handle);
 			if (res != 0) {
 				output_box->append("Error Setting up PI Engineering Device");
 			}
 			else {
-				if (dev->PID == 1027) {
-					output_box->append("Found Device: X-keys XK-24, PID=1027 or PID #2");
-				}
-				else if (dev->PID == 1028) {
-					output_box->append("Found Device: X-keys XK-24, PID=1028");
-				}	
-				else if (dev->PID == 1029) {
-					output_box->append("Found Device: X-keys XK-24, PID=1029 or PID #1");
-				}
-
+				output_box->append(dev->ProductString + QString(", PID:") + QString::number(dev->PID));
+				
 				/* Set up the Data Callback. */
 				unsigned int result;
 				result = SetDataCallback(handle, HandleDataEvent);
@@ -134,7 +116,7 @@ MainWindow::startButtonClicked(bool)
 					QMessageBox::critical(this, "Error", "Error setting event callback");
 				}
 
-				SuppressDuplicateReports(handle, false);
+				SuppressDuplicateReports(handle, false); //if dealing with SE or MWII firmware may want this to be true
 				break;
 			}
 		}
@@ -150,6 +132,10 @@ MainWindow::stopButtonClicked()
 {
 	if (handle >= 0) {
 		CloseInterface(handle);
+
+
+
+
 		output_box->append("Disconnected from device");	
 	}
 	handle = -1;
@@ -166,6 +152,28 @@ void
 MainWindow::clearClicked()
 {
 	output_box->clear();
+}
+
+void
+MainWindow::unitIDClicked()
+{
+	if (!checkHandle())
+		return;
+	//Set the unit ID
+
+	bool ok;
+	int unit_id = unitid_number->text().toInt(&ok, 10);
+
+	unsigned int result;
+	unsigned char buffer[80];
+	memset(buffer, 0, sizeof(buffer));
+	buffer[1]= 189;
+	buffer[2]= unit_id;
+	result = WriteData(handle, buffer);
+
+	if (result != 0) {
+			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
+	}
 }
 
 void
@@ -226,264 +234,14 @@ MainWindow::flashFrequencyChanged(const QString &str)
 }
 
 void
-MainWindow::backlightOnOffClicked(bool state)
-{
-	// Turn on/off the backlight of the entered key in the
-	// backlight_number field. Use the Set Flash Freq to
-	// control frequency of blink.
-
-	//  Key Index for XK-24 (in decimal):
-		//Bank 1
-		//Columns-->
-		//  0   8   16  24
-		//  1   9   17  25
-		//  2   10  18  26
-		//  3   11  19  27
-		//  4   12  20  28
-		//  5   13  21  29
-
-		//Bank 2
-		//Columns-->
-		//  32   40   48  56
-		//  33   41   49  57
-		//  34   42   50  58
-		//  35   43   51  59
-		//  36   44   52  60
-		//  37   45   53  61
-
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-	buffer[1]=181; //0xb5
-	bool ok;
-	int key_id = backlight_number->text().toInt(&ok, 10);
-	buffer[2] = key_id;
-
-	if (state) {
-		if (backlight_flash->isChecked()) {
-			buffer[3] = 2; // 2 = flash
-		}
-		else {
-			buffer[3] = 1;
-		}
-	}
-	else
-		buffer[3] = 0;
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightFlashClicked(bool)
-{
-	// Turn on/off the backlight of the entered key in the
-	// backlight_number field. Use the Set Flash Freq to
-	// control frequency of blink.
-
-	//  Key Index for XK-24 (in decimal):
-		//Bank 1
-		//Columns-->
-		//  0   8   16  24
-		//  1   9   17  25
-		//  2   10  18  26
-		//  3   11  19  27
-		//  4   12  20  28
-		//  5   13  21  29
-
-		//Bank 2
-		//Columns-->
-		//  32   40   48  56
-		//  33   41   49  57
-		//  34   42   50  58
-		//  35   43   51  59
-		//  36   44   52  60
-		//  37   45   53  61
-
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-	buffer[1]=181; //0xb5
-	bool ok;
-	int key_id = backlight_number->text().toInt(&ok, 10);
-	buffer[2] = key_id;
-
-	if (backlight_flash->isChecked()) {
-		buffer[3] = 2; // 2 = flash
-	}
-	else {
-		buffer[3] = (backlight_on_off->isChecked())? 1: 0; // 1=on, 2=off
-	}
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightBank1AllClicked(bool)
-{
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-
-	buffer[0]=0;
-	buffer[1]=182;
-	buffer[2]=0; //0 for blue, 1 for red
-	if (backlight_bank1_all->isChecked())
-		buffer[3] = 255;
-	else
-		buffer[3] = 0;
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightBank2AllClicked(bool)
-{
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-
-	buffer[0]=0;
-	buffer[1]=182;
-	buffer[2]=1; //0 for blue, 1 for red
-
-	if (backlight_bank2_all->isChecked())
-		buffer[3] = 255;
-	else
-		buffer[3] = 0;
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightScrollLockClicked(bool)
-{
-	// If checked then the Scroll Lock key on the main
-	// keyboard will toggle the backlights.
-
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-	buffer[0]=0;
-	buffer[1]=183;
-	if (backlight_scroll_lock->isChecked())
-		buffer[2] = 128; //0=disable scroll lock toggle
-	else
-		buffer[2] = 0; // 128=enable scroll lock toggle
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightToggle()
-{
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-
-	//Toggle the backlights
-	buffer[0]=0;
-	buffer[1]=184;
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightSetIntensity()
-{
-	// Sets the green and red backlighting intensity,
-	// one value for all greens or reds
-
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-
-	buffer[0]=0;
-	buffer[1]=187;
-	buffer[2]=127; // 0-255 blue intensity
-	buffer[3]=64;  // 0-255 red intensity
-	
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
-MainWindow::backlightSave()
-{
-	// Write current state of backlighting to EEPROM.  
-	// NOTE: Is it not recommended to do this frequently as there are a finite number of writes to the EEPROM allowed
-
-	if (!checkHandle())
-		return;
-
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-
-	buffer[0]=0;
-	buffer[1]=199;
-	buffer[2]=1; // Anything other than 0 will save the Backlight
-	             // state to eeprom, default is 0
-
-	result = WriteData(handle, buffer);
-
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-	}
-}
-
-void
 MainWindow::convertPID1Clicked()
 {
+	//applicable only to products with multiple PIDs
 	if (!checkHandle())
 		return;
+
+	bool ok;
+	int pid_num = pid_number->text().toInt(&ok, 10);
 
 	unsigned int result;
 	unsigned char buffer[80];
@@ -491,36 +249,44 @@ MainWindow::convertPID1Clicked()
 
 	buffer[0]=0;
 	buffer[1]=204;
-	buffer[2]=2; //0=PID #2, 2=PID #1
+	buffer[2]=pid_num; //0, 1, 2, 3, etc. see SDK documentation for endpoints available on each pid
 
 	result = WriteData(handle, buffer);
 
 	if (result != 0) {
 		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
 	}
+
+	
 }
 
-
 void
-MainWindow::convertPID2Clicked()
+MainWindow::individualLEDClicked()
 {
+	//applicable only to products with backlight LEDs
 	if (!checkHandle())
 		return;
 
+	bool ok;
+	int led_index2 = led_index->text().toInt(&ok, 10);
+	int led_state2 = led_state->text().toInt(&ok, 10);
 
 	unsigned int result;
 	unsigned char buffer[80];
 	memset(buffer, 0, sizeof(buffer));
 
 	buffer[0]=0;
-	buffer[1]=204;
-	buffer[2]=0; //0=PID #2, 2=PID #1
+	buffer[1]=181;
+	buffer[2]=led_index2;
+	buffer[3]=led_state2;
 
 	result = WriteData(handle, buffer);
 
 	if (result != 0) {
 		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
 	}
+
+	
 }
 
 void
@@ -531,13 +297,9 @@ MainWindow::showDescriptorClicked()
 	if (!checkHandle())
 		return;
 
+
 	// Turn off the data callback.
 	DisableDataCallback(handle, true);
-
-	result = SetDataCallback(handle, HandleDataEvent);
-	if (result != 0) {
-		QMessageBox::critical(this, "Error", "Error setting event callback");
-	}
 
 	unsigned char buffer[80];
 	memset(buffer, 0, sizeof(buffer));
@@ -697,73 +459,14 @@ MainWindow::keyboardReflectorClicked()
 	if (!checkHandle())
 		return;
 
-	keyboard = true;
-}
+	kbd_input->setFocus();
 
-void
-MainWindow::joystickReflectorClicked()
-{
-	if (!checkHandle())
-		return;
+	//Sends keyboard commands as a native keyboard
+		//results: Abcd in kbd_input
+		unsigned int result;
+		unsigned char buffer[80];
+		memset(buffer, 0, sizeof(buffer));
 
-	joystick = !joystick;
-	if (joystick)
-		joystick_label->setText("Joystick On");
-	else
-		joystick_label->setText("Joystick Off");
-	
-}
-
-void
-MainWindow::mouseReflectorClicked()
-{
-	if (!checkHandle())
-		return;
-
-	// After turning mouseon=true, pressing 1st key will behave as left
-	// mouse button only available in PID #1.
-	if (!mouseon) {
-		mouseon = true;
-		mouse_label->setText("Mouse On");
-	}
-	else {
-		mouseon = false;
-		mouse_label->setText("Mouse Off");
-	}
-}
-
-/*static*/
-unsigned int
-MainWindow::HandleDataEvent(unsigned char *pData, unsigned int deviceID, unsigned int error)
-{
-	g_main_window->handleDataEvent(pData, deviceID, error);
-	return true;
-}
-
-
-unsigned int
-MainWindow::handleDataEvent(unsigned char *pData, unsigned int deviceID, unsigned int error)
-{
-	unsigned int result;
-	char dataStr[256];
-
-	sprintf(dataStr, "%02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x", 
-		pData[0], pData[1], pData[2], pData[3], pData[4], pData[5], pData[6], pData[7], pData[8], pData[9], pData[10], pData[11]);
-
-	// Append it to the end of the output box. This is done using a signal
-	// which is connected to the output box because this function is
-	// called from a different thread than the GUI is on.
-	emit append(dataStr);
-
-	// The output buffer
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-
-	//for Keyboard Reflect,
-	if ((pData[3]&1) && keyboard==true) {
-		//Sends keyboard commands as a native keyboard
-		//Before pressing 1st key activate a Notepad or other text capturing application to see the results: Abcd
-		
 		buffer[0]=0;
 		buffer[1]=201;
 		buffer[2]=2; //modifiers Bit 1=Left Ctrl, bit 2=Left Shift, bit 3=Left Alt, bit 4=Left Gui, bit 5=Right Ctrl, bit 6=Right Shift, bit 7=Right Alt, bit 8=Right Gui.
@@ -807,11 +510,102 @@ MainWindow::handleDataEvent(unsigned char *pData, unsigned int deviceID, unsigne
 		result = WriteData(handle, buffer);
 		if (result != 0) {
 			emit messageBox("Write Error", "Unable to write to Device.");
-		}
-		keyboard=false;
-	}
+		}	
+}
+
+void
+MainWindow::joystickReflectorClicked()
+{
+	if (!checkHandle())
+		return;
+
 	
-	//for Mouse Reflect, must be in PID #1 to function
+
+		// Open up the game controller control panel to test these features,
+		// after clicking this button go and make active the control panel
+		// properties and change will occur.
+		                      
+		unsigned char buttons = 15; //turn on first 4 game buttons
+		
+		printf("Buttons %02hhx\n", buttons);
+
+		unsigned int result;
+		unsigned char buffer[80];
+		memset(buffer, 0, sizeof(buffer));
+		
+		buffer[0]=0;
+		buffer[1]=202;
+		buffer[2]=128;  // X, 0 to 127 from center to right, 255 to 128 from center to left
+		buffer[3]=128;  // Y, 0 to 127 from center down, 255 to 128 from center up
+		buffer[4]=128;  // Z rot, 0 to 127 from center down, 255 to 128 from center up
+		buffer[5]=128;  // Z, 0 to 127 from center down, 255 to 128 from center up
+		buffer[6]=128;  // Slider, 0 to 127 from center down, 255 to 128 from center up
+		
+		buffer[7]=buttons;  // Game buttons as bitmap, bit 1= game button 1, bit 2=game button 2, etc., buttons 1-8
+		buffer[8]=0;  // Game buttons as bitmap, bit 1= game button 9, bit 2=game button 10, etc., buttons 9-16
+		buffer[9]=0;  // Game buttons as bitmap, bit 1= game button 17, bit 2=game button 18, etc., buttons 17-24
+		buffer[10]=0; // Game buttons as bitmap, bit 1= game button 25, bit 2=game button 26, etc., buttons 25-32
+		
+		buffer[11]=0;
+
+		buffer[12]=8; // Hat, 0 to 7 clockwise, 8=no hat
+
+		result = WriteData(handle, buffer);
+
+		if (result != 0) {
+			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
+		}
+	
+	
+}
+
+void
+MainWindow::mouseReflectorClicked()
+{
+	if (!checkHandle())
+		return;
+
+	// After turning mouseon=true, pressing 1st key will behave as left
+	// mouse button only available in PID #1.
+	if (!mouseon) {
+		mouseon = true;
+		mouse_label->setText("Mouse On");
+	}
+	else {
+		mouseon = false;
+		mouse_label->setText("Mouse Off");
+	}
+}
+
+/*static*/
+unsigned int
+MainWindow::HandleDataEvent(unsigned char *pData, unsigned int deviceID, unsigned int error)
+{
+	g_main_window->handleDataEvent(pData, deviceID, error);
+	return true;
+}
+
+
+unsigned int
+MainWindow::handleDataEvent(unsigned char *pData, unsigned int deviceID, unsigned int error)
+{
+	unsigned int result;
+	char dataStr[256];
+
+	sprintf(dataStr, "%02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x -- %02x %02x %02x %02x", 
+		pData[0], pData[1], pData[2], pData[3], pData[4], pData[5], pData[6], pData[7], pData[8], pData[9], pData[10], pData[11], pData[12], pData[13], pData[14], pData[15], pData[16], pData[17], pData[18], pData[19], pData[20], pData[21], pData[22], pData[23], pData[24], pData[25], pData[26], pData[27], pData[28], pData[29], pData[30], pData[31], pData[32], pData[33], pData[34], pData[35]);
+
+	// Append it to the end of the output box. This is done using a signal
+	// which is connected to the output box because this function is
+	// called from a different thread than the GUI is on.
+	emit append(dataStr);
+
+	// The output buffer
+	unsigned char buffer[80];
+	memset(buffer, 0, sizeof(buffer));
+	
+	
+	//for Mouse Reflect
 	if (mouseon) {
 		bool progsw = pData[3] & 1;
 		if (progsw && !lastprogsw) //key down
@@ -849,46 +643,7 @@ MainWindow::handleDataEvent(unsigned char *pData, unsigned int deviceID, unsigne
 		lastprogsw=progsw;
 	}
 
-	if (joystick) {
-		// Open up the game controller control panel to test these features,
-		// after clicking this button go and make active the control panel
-		// properties and change will occur available for PID #2 only.
-		// In this example, the first 4 buttons on the device will
-		// correspond to the first 4 buttons of the joystick.
-		unsigned char buttons = ((pData[3] & 0x1) << 0) |
-		                        ((pData[4] & 0x1) << 1) |
-		                        ((pData[5] & 0x1) << 2) |
-		                        ((pData[6] & 0x1) << 3);
-		
-		printf("Buttons %02hhx\n", buttons);
-
-		unsigned int result;
-		unsigned char buffer[80];
-		memset(buffer, 0, sizeof(buffer));
-		
-		buffer[0]=0;
-		buffer[1]=202;
-		buffer[2]=128;  // X, 0 to 127 from center to right, 255 to 128 from center to left
-		buffer[3]=128;  // Y, 0 to 127 from center down, 255 to 128 from center up
-		buffer[4]=128;  // Z rot, 0 to 127 from center down, 255 to 128 from center up
-		buffer[5]=128;  // Z, 0 to 127 from center down, 255 to 128 from center up
-		buffer[6]=128;  // Slider, 0 to 127 from center down, 255 to 128 from center up
-		
-		buffer[7]=buttons;  // Game buttons as bitmap, bit 1= game button 1, bit 2=game button 2, etc., all buttons on
-		buffer[8]=0;  // Game buttons as bitmap, bit 1= game button 1, bit 2=game button 2, etc., all buttons on
-		buffer[9]=0;  // Game buttons as bitmap, bit 1= game button 1, bit 2=game button 2, etc., all buttons on
-		buffer[10]=0; // Game buttons as bitmap, bit 1= game button 1, bit 2=game button 2, etc., all buttons on
-		
-		buffer[11]=0;
-
-		buffer[12]=1; // Hat, 0 to 7 clockwise, 8=no hat
-
-		result = WriteData(handle, buffer);
-
-		if (result != 0) {
-			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
-		}
-	}
+	
 	
 	// Error handling
 	if (error == PIE_HID_READ_INVALID_HANDLE)
@@ -918,18 +673,62 @@ MainWindow::setLED(int number, int mode/*0=off,1=on,2=blink*/)
 	if (!checkHandle())
 		return;
 
-	unsigned int result;
-	unsigned char buffer[80];
-	memset(buffer, 0, sizeof(buffer));
-	buffer[1]=179; // 0xb3
-	buffer[2]=number;  // 6 for green, 7 for red
-	buffer[3]= mode; // 0=off, 1=on, 2=flash
+	//applicable for pi3 firmwares and later, ie PID>0x0400
+	if (thispid>0x03FF)
+	{
+		unsigned int result;
+		unsigned char buffer[80];
+		memset(buffer, 0, sizeof(buffer));
+		buffer[1]=179; // 0xb3
+		buffer[2]=number;  // 6 for green, 7 for red
+		buffer[3]= mode; // 0=off, 1=on, 2=flash
 	
-	result = WriteData(handle, buffer);
+		result = WriteData(handle, buffer);
 
-	if (result != 0) {
-		QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
+		if (result != 0) {
+			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
+		}
 	}
+	//obsolete MWII Products-LEDs are bitmapped, make a global variable to keep track of each LED and set or set bit
+	//this sample is just turning only the red or green on or off.
+	else if (thispid>0x02A4 && thispid<0x400)
+	{
+		unsigned int result;
+		unsigned char buffer[80];
+		memset(buffer, 0, sizeof(buffer));
+		if (number==6)number=64;
+		else if (number==7)number=128;
+		if (mode==0)number=0; 
+		buffer[0] = 2;
+		buffer[1] = 186;
+		buffer[7]=number;  // 64 for green only, 128 for red only, 0 for none, 192 (64+128) for both
+	
+		result = WriteData(handle, buffer);
+
+		if (result != 0) {
+			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
+		}
+	}
+	//obsolete SE Products-LEDs are bitmapped, make a global variable to keep track of each LED and set or set bit
+	//this sample is just turning only the red or green on or off.
+	else if (thispid<0x02A5)
+	{
+		unsigned int result;
+		unsigned char buffer[80];
+		memset(buffer, 0, sizeof(buffer));
+		if (number==6)number=64;
+		else if (number==7)number=128;
+		if (mode==0)number=0;
+		buffer[8]=number;  // 64 for green only, 128 for red only, 0 for none, 192 (64+128) for both
+	
+		result = WriteData(handle, buffer);
+
+		if (result != 0) {
+			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
+		}
+	}
+	
+	
 }
 
 bool

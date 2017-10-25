@@ -1,14 +1,10 @@
-/***************************************************
+/****************************************
  X-Keys Test GUI Main Window
-
- The code may be used by anyone for any purpose,
- and can serve as a starting point for developing
- applications using the X-Keys libary.
  
  Alan Ott
  Signal 11 Software
  2011-08-15
-***************************************************/
+****************************************/
 
 #ifndef MAIN_WINDOW_H__
 #define MAIN_WINDOW_H__
@@ -44,20 +40,11 @@ private slots:
 	void flashGreenCheckClicked(bool);
 	void flashRedCheckClicked(bool);
 	void flashFrequencyChanged(const QString &);
-	
-	// Backlight controls
-	void backlightOnOffClicked(bool);
-	void backlightFlashClicked(bool);
-	void backlightBank1AllClicked(bool);
-	void backlightBank2AllClicked(bool);
-	void backlightScrollLockClicked(bool);
-	void backlightToggle();
-	void backlightSetIntensity();
-	void backlightSave();
+	void unitIDClicked();
+	void individualLEDClicked();
 
 	// PID controls
 	void convertPID1Clicked();
-	void convertPID2Clicked();
 	void showDescriptorClicked();
 	void generateReportClicked();
 	
@@ -79,8 +66,8 @@ private:
 	static unsigned int HandleDataEvent(unsigned char *pData, unsigned int deviceID, unsigned int error);
 	unsigned int handleDataEvent(unsigned char *pData, unsigned int deviceID, unsigned int error);
 	
-	bool keyboard; //for keyboard reflect sample
-	bool joystick;
+	int thispid; 
+	//bool joystick;
 	bool mouseon;
 	bool lastprogsw;
 };
