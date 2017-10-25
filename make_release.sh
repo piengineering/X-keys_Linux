@@ -12,11 +12,11 @@
 if [ $# -ne 1 ]; then
 	echo "Usage: $0 VERSION_NUMBER"
 	echo "For example: "
-	echo "    $0 1.0.0"
+	echo "    $0 2.0.0"
 	exit 1;
 fi
 
-export VERSION=$1
+export VERSION=$2
 export TAG_NAME=xkeys-$VERSION
 
 git tag $TAG_NAME
