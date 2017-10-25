@@ -1,13 +1,3 @@
-/***************************************************
- X-Keys Test Program
-
- The code may be used by anyone for any purpose,
- and can serve as a starting point for developing
- applications using the X-Keys libary.
- 
- Alan Ott
- Signal 11 Software
-***************************************************/
 
 #include "PieHid32.h"
 #include <unistd.h>
@@ -38,21 +28,26 @@ int main(void)
 	
 	unsigned res = EnumeratePIE(PI_VID, info, &count);
 	
-	for (i = 0; i < count; i++) {
+	for (i = 0; i < count; i++) 
+	{
 		TEnumHIDInfo *dev = &info[i];
 		printf("Found XKeys Device:\n");
 		printf("\tPID: %04x\n", dev->PID);
 		printf("\tUsage Page: %04x\n", dev->UP);
 		printf("\tUsage:      %04x\n", dev->Usage);
 		printf("\tVersion: %d\n\n", dev->Version);
+		if (dev->UP == 0x000c && dev->writeSize > 0) 
+		{
+			/* This is the splat interface, */
 
-
-		handle = dev->Handle;
-		unsigned int res = SetupInterfaceEx(handle);
-		if (res != 0) {
-			printf("Unabe to open device. err: %d\n", res);
-		}
-		break;
+			handle = dev->Handle;
+			unsigned int res = SetupInterfaceEx(handle);
+			if (res != 0) 
+			{
+				printf("Unabe to open device. err: %d\n", res);
+			}
+			break;
+         	}
 	}
 	
 	if (handle < 0) {
