@@ -8,7 +8,7 @@
 
 
 #include <Qt>
-#include <QtGui/QMessageBox>
+#include <QMessageBox>
 
 #include "MainWindow.h"
 #include <stdio.h>
