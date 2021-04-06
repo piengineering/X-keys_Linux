@@ -17,7 +17,7 @@ if(COMMAND cmake_policy)
   cmake_policy(SET CMP0003 NEW)
 endif(COMMAND cmake_policy)
 
-find_package(Qt4 REQUIRED)
+find_package(Qt5Widgets REQUIRED)
 
 # Source (cpp) files
 SET(SRCS
@@ -33,21 +33,19 @@ SOURCE_GROUP("MOC Files" REGULAR_EXPRESSION moc_.*cxx$)
 SET(MOC_HEADERS
 	MainWindow.h
 )
-QT4_WRAP_CPP(MOC_SRCS ${MOC_HEADERS})
+QT5_WRAP_CPP(MOC_SRCS ${MOC_HEADERS})
 
 # UI Files
 SET(UI_FILES
 	resources/MainWindow.ui
 )
-QT4_WRAP_UI(UI_SRCS ${UI_FILES})
+QT5_WRAP_UI(UI_SRCS ${UI_FILES})
 
 # Resource Files
 SET(RESOURCE_RC
 	resources/MainWindow.qrc
 )
-QT4_ADD_RESOURCES(RC_SRCS ${RESOURCE_RC})
-
-include(${QT_USE_FILE})
+QT5_ADD_RESOURCES(RC_SRCS ${RESOURCE_RC})
 
 INCLUDE_DIRECTORIES(
 	${QT_INCLUDE_DIR}
@@ -77,8 +75,9 @@ if (WIN32)
 	
 endif (WIN32)
 
-TARGET_LINK_LIBRARIES(
-	pietestgui
-	${QT_LIBRARIES}
-	piehid
-)
+target_link_libraries (pietestgui
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Widgets
+        piehid)
+

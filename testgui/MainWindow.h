@@ -9,7 +9,7 @@
 #ifndef MAIN_WINDOW_H__
 #define MAIN_WINDOW_H__
 
-#include <QtGui/QDialog>
+#include <QDialog>
 #include "ui_MainWindow.h"
 
 #include "PieHid32.h"

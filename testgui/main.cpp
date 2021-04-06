@@ -10,7 +10,7 @@
  2011-08-15
 ***************************************************/
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #include "MainWindow.h"
 
 int main(int argc, char **argv)
