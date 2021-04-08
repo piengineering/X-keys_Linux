@@ -62,6 +62,17 @@ ADD_DEFINITIONS(-Wall)
 
 ADD_EXECUTABLE(pietestgui ${MOC_SRCS} ${SRCS} ${UI_SRCS} ${UI_SRCS} ${RC_SRCS})
 
+TARGET_LINK_LIBRARIES(pietestgui
+	Qt5::Core
+	Qt5::Gui
+	Qt5::Widgets
+	piehid
+)
+
+INSTALL(TARGETS pietestgui
+    RUNTIME DESTINATION bin
+)
+
 
 if (WIN32)
    # Make it start in main() on Windows.
@@ -74,10 +85,4 @@ if (WIN32)
    SET(CMAKE_EXE_LINKER_FLAGS_RELEASE "/subsystem:windows")
 	
 endif (WIN32)
-
-target_link_libraries (pietestgui
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Widgets
-        piehid)
 
