@@ -65,9 +65,7 @@ ADD_EXECUTABLE(pietestgui ${MOC_SRCS} ${SRCS} ${UI_SRCS} ${UI_SRCS} ${RC_SRCS})
 INSTALL(FILES pietestgui.desktop DESTINATION share/applications)
 INSTALL(FILES pieng.png DESTINATION share/pixmaps RENAME pietestgui.png)
 
-INSTALL(TARGETS pietestgui
-    RUNTIME DESTINATION bin
-)
+INSTALL(TARGETS pietestgui RUNTIME DESTINATION bin)
 
 TARGET_LINK_LIBRARIES(pietestgui
 	Qt5::Core
