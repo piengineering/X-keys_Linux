@@ -63,6 +63,16 @@ ADD_DEFINITIONS(-Wall)
 ADD_EXECUTABLE(pietestgui ${MOC_SRCS} ${SRCS} ${UI_SRCS} ${UI_SRCS} ${RC_SRCS})
 
 INSTALL(FILES pietestgui.desktop DESTINATION share/applications)
+INSTALL(FILES pieng.png DESTINATION share/pixmaps RENAME pietestgui.png)
+
+INSTALL(TARGETS pietestgui RUNTIME DESTINATION bin)
+
+TARGET_LINK_LIBRARIES(pietestgui
+	Qt5::Core
+	Qt5::Gui
+	Qt5::Widgets
+	piehid
+)
 
 
 if (WIN32)
@@ -76,10 +86,4 @@ if (WIN32)
    SET(CMAKE_EXE_LINKER_FLAGS_RELEASE "/subsystem:windows")
 	
 endif (WIN32)
-
-target_link_libraries (pietestgui
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Widgets
-        piehid)
 
