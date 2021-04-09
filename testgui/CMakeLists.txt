@@ -62,6 +62,8 @@ ADD_DEFINITIONS(-Wall)
 
 ADD_EXECUTABLE(pietestgui ${MOC_SRCS} ${SRCS} ${UI_SRCS} ${UI_SRCS} ${RC_SRCS})
 
+INSTALL(FILES pietestgui.desktop DESTINATION share/applications)
+
 
 if (WIN32)
    # Make it start in main() on Windows.
