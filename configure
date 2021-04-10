@@ -5,6 +5,7 @@ if [ "$1" == "--help" ]; then
 	echo "to CMake by this script. For example:"
 	echo "  ./configure -D CMAKE_INSTALL_PREFIX=/usr "
 	echo "  ./configure -D CMAKE_BUILD_TYPE=Release "
+	echo "  ./configure -D BUILD_STATIC_LIBS=OFF "
 	echo "  ./configure -D LIB_SUFFIX=64 "
 	echo "Passing no parameters will give the default build."
 	exit 1
