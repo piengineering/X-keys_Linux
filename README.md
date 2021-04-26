@@ -7,26 +7,49 @@ PI Engineering, Signal 11 Software
 #### Prerequisites
 
 The SDK requires libusb-1.0 in order to build. The GUI test application
-requires Qt 5.  The build system is CMake.  To install all of these on an
-Ubuntu system, run the following from the command line:
+requires Qt 5.  The build system is CMake.  To install all of these dependencies
+run the appropriate command for your operating system/distro:
 ```
-    sudo apt-get install build-essential libqt4-dev libusb-1.0-0-dev cmake
+    # Debian 8 / 9 / 10
+    sudo apt-get install -y build-essential qtbase5-dev libusb-1.0-0-dev cmake
+    
+    # Ubuntu 16.04+ (tested through version 20.10)
+    sudo apt-get install -y build-essential qtbase5-dev libusb-1.0-0-dev cmake pkg-config 
+
+    # RHEL 7 / CentOS 7 / Oracle 7
+    sudo yum group install -y "Development Tools" && sudo yum install -y qt5-qtbase-devel cmake git libusbx-devel xorg-x11-xauth dbus-x11
+    
+    # CentOS 8 / CentOS 8 / Oracle 8
+    sudo dnf group install -y "Development Tools" && sudo dnf install -y qt5-qtbase-devel cmake git libusbx-devel xorg-x11-xauth dbus-x11
 ```
-Based on your version of Ubuntu, these packages may have slightly different
-names. Use Bash's tab-completion to find the exact name for these packages
-on your system. On different distributions of Linux, install a compiler, Qt 5,
-libusb-1.0, and cmake using your distribution's package system or install
-them manually from source.
+These packages may have slightly different names on other operating systems
+and/or distro versions.
+
+#### Clone
+
+To acquire the souce code cloen the Xkeys repo and change into the cloned
+directory;
+
+```
+    git clone https://github.com/piengineering/X-keys_Linux && cd X-keys_Linux 
+ ```
 
 #### Build
 
-Run `./configure` from this directory. This will configure the CMake build
+Run `./configure` from cloned directory. This will configure the CMake build
 system and create a build/ directory which will contain all the binaries. 
 Run `./configure --help` to see a list of common options which can be passed
-to the configure script.  All options passed to ./configure are passed
-directly to the CMake.
+to the configure script.  All options passed to `./configure` are passed
+directly to the CMake. If .`/configure` succeeds, run `make` in the same
+directory to build the software:
 
-Running `make` in this directory after `./configure` will build the software
+```
+    # On RHEL 7 / CentOS 7 / Oracle 7
+    ./configure -DCMAKE_CXX_FLAGS=--std=c++11 && make
+    
+    # On Debian / Ubuntu or RHEL 8 / CentOS 8 / Oracle 8
+    ./configure && make
+```
 
 #### Running
 
@@ -41,14 +64,15 @@ from this directory using the following:
 
 Running `make install` from this directory after the software has been built
 will install the library.  By default it installs the PieHid32.h header and
-the shared and static library files into /usr/local/.  The install directory
-can be set from the configure script.  Running:
+the shared and static library files into /usr/local/.  The set a different 
+directory prefix, you can can run:
 ```
-    ./configure -D CMAKE_INSTALL_PREFIX=/usr
+    # To install in /usr/local
+    ./configure && sudo make install
+    
+    # To install in /usr
+    ./configure -D CMAKE_INSTALL_PREFIX=/usr && sudo make install
 ```
-will cause the installed programs to be installed into /usr instead of
-/usr/local/.
-
 
 ## Usage:
 
