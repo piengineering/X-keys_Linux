@@ -19,7 +19,7 @@ run the appropriate command for your operating system/distro:
     # RHEL 7 / CentOS 7 / Oracle 7
     sudo yum group install -y "Development Tools" && sudo yum install -y qt5-qtbase-devel cmake git libusbx-devel xorg-x11-xauth dbus-x11
     
-    # CentOS 8 / CentOS 8 / Oracle 8
+    # Fedora / CentOS 8 / CentOS 8 / Oracle 8
     sudo dnf group install -y "Development Tools" && sudo dnf install -y qt5-qtbase-devel cmake git libusbx-devel xorg-x11-xauth dbus-x11
 ```
 These packages may have slightly different names on other operating systems
@@ -47,7 +47,7 @@ directory to build the software:
     # On RHEL 7 / CentOS 7 / Oracle 7
     ./configure -DCMAKE_CXX_FLAGS=--std=c++11 && make
     
-    # On Debian / Ubuntu or RHEL 8 / CentOS 8 / Oracle 8
+    # On Debian / Ubuntu / Fedora or RHEL 8 / CentOS 8 / Oracle 8 
     ./configure && make
 ```
 
