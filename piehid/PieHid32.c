@@ -1409,6 +1409,186 @@ void PIE_HID_CALL GetProductString(int Pid, char* out_str)
 	case 0x052B:
 		str = "XK-16 LCD (KVM)";
 		break;
+	case 0x052D:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x052E:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x052F:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x0530:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x0531:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x0532:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x0533:
+		str = "XKE-64 Jog T-bar";
+		break;
+	case 0x0534:
+		str = "XKE-64 Jog T-bar (KVM)";
+		break;
+	case 0x0547:
+		str = "IAB-HD15-GPIO";
+		break;
+	case 0x0548:
+		str = "IAB-HD15-GPIO";
+		break;
+	case 0x0549:
+		str = "IAB-HD15-GPIO";
+		break;
+	case 0x054A:
+		str = "IAB-HD15-GPIO";
+		break;
+	case 0x054B:
+		str = "XKE-40";
+		break;
+	case 0x054C:
+		str = "XKE-40";
+		break;
+	case 0x054D:
+		str = "XKE-40";
+		break;
+	case 0x054E:
+		str = "XKE-40";
+		break;
+	case 0x054F:
+		str = "XKE-40";
+		break;
+	case 0x0550:
+		str = "XKE-40";
+		break;
+	case 0x0551:
+		str = "XKE-40";
+		break;
+	case 0x0552:
+		str = "XKE-40 (KVM)";
+		break;
+	case 0x053F:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0540:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0541:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0542:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0543:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0544:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0545:
+		str = "XBK-QWERTY Module";
+		break;
+	case 0x0546:
+		str = "XBK-QWERTY Module(KVM)";
+		break;
+	case 0x0555:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x0556:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x0557:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x0558:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x0559:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x055A:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x055B:
+		str = "XBK-4x6 Module";
+		break;
+	case 0x055C:
+		str = "XBK-4x6 Module (KVM)";
+		break;
+	case 0x0562:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0563:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0564:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0565:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0566:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0567:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0568:
+		str = "XBK-3x6 Module";
+		break;
+	case 0x0569:
+		str = "XBK-3x6 Module (KVM)";
+		break;
+	case 0x056C:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x056D:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x056E:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x056F:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x0570:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x0571:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x0572:
+		str = "XBK-4x3 Jog Module";
+		break;
+	case 0x0573:
+		str = "XBK-4x3 Jog Module (KVM)";
+		break;
+	case 0x0574:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x0575:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x0576:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x0577:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x0578:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x0579:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x057A:
+		str = "XBK-3x6 T-bar Module";
+		break;
+	case 0x057B:
+		str = "XBK-3x6 Module (KVM)";
+		break;
 	default:
 		str = "Unknown product";
 		break;
@@ -1423,634 +1603,634 @@ void PIE_HID_CALL GetProductString(int Pid, char* out_str)
     { vid, pid, interface, usage_page, usage, readlength, writelength,},
 
 static const struct device_map_entry device_map[] = {
-	DEVICE_MAP_ENTRY(PI_VID, 0x0405, 0, 0x000c, 0x0001, 0x0021, 0x0024) /* XK-24 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0405, 0, 0x000c, 0x0001, 0x0021, 0x0024) /* XK-24 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0405, 1, 0x0001, 0x0006, 0x0009, 0x0002) /* XK-24 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0405, 2, 0x0001, 0x0002, 0x0006, 0x0000) /* XK-24 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0404, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-24 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0404, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-24 write only (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0404, 1, 0x0001, 0x0006, 0x0009, 0x0002) /* XK-24 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0404, 2, 0x0001, 0x0004, 0x000C, 0x0000) /* XK-24 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0404, 3, 0x0001, 0x0002, 0x0006, 0x0000) /* XK-24 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0403, 0, 0x000c, 0x0001, 0x0021, 0x0024) /* XK-24 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0403, 0, 0x000c, 0x0001, 0x0021, 0x0024) /* XK-24  read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0403, 1, 0x0001, 0x0006, 0x0009, 0x0002) /* XK-24 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0403, 2, 0x0001, 0x0004, 0x000C, 0x0000) /* XK-24 joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E1, 0, 0x000c, 0x0001, 0, 36) /* XK-24 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E1, 0, 0x000c, 0x0001, 0, 36) /* XK-24 splat write only (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E1, 1, 0x0001, 0x0006, 9, 2) /* XK-24 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E1, 2, 0x000c, 0x0001, 3, 0) /* XK-24 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E1, 3, 0x0001, 0x0080, 2, 0) /* XK-24 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E1, 4, 0x0001, 0x0002, 6, 0) /* XK-24 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0406, 0, 0x000c, 0x0001, 33, 36) /* Pi3 Matrix Board splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0406, 0, 0x000c, 0x0001, 33, 36) /* Pi3 Matrix Board read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0406, 1, 0x0001, 0x0006, 9, 2) /* Pi3 Matrix Board keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0406, 2, 0x0001, 0x0002, 6, 0) /* Pi3 Matrix Board mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0407, 0, 0x000c, 0x0001, 0, 36) /* Pi3 Matrix Board splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0407, 0, 0x000c, 0x0001, 0, 36) /* Pi3 Matrix Board write only (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0407, 1, 0x0001, 0x0006, 9, 2) /* Pi3 Matrix Board keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0407, 2, 0x0001, 0x0004, 12, 0) /* Pi3 Matrix Board joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0407, 3, 0x0001, 0x0002, 6, 0) /* Pi3 Matrix Board mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0408, 0, 0x000c, 0x0001, 33, 36) /* Pi3 Matrix Board splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0408, 0, 0x000c, 0x0001, 33, 36) /* Pi3 Matrix Board read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0408, 1, 0x0001, 0x0006, 9, 2) /* Pi3 Matrix Board keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0408, 2, 0x0001, 0x0004, 12, 0) /* Pi3 Matrix Board joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E7, 0, 0x000c, 0x0001, 0, 36) /* Pi3 Matrix Board splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E7, 0, 0x000c, 0x0001, 0, 36) /* Pi3 Matrix Board write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E7, 1, 0x0001, 0x0006, 9, 2) /* Pi3 Matrix Board keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E7, 2, 0x000c, 0x0001, 3, 0) /* Pi3 Matrix Board multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E7, 3, 0x0001, 0x0080, 2, 0) /* Pi3 Matrix Board multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E7, 4, 0x0001, 0x0002, 6, 0) /* Pi3 Matrix Board mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0419, 0, 0x000c, 0x0001, 33, 36) /* XK-16 Stick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0419, 0, 0x000c, 0x0001, 33, 36) /* XK-16 Stick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0419, 1, 0x0001, 0x0006, 9, 2) /* XK-16 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0419, 2, 0x0001, 0x0002, 6, 0) /* XK-16 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x041A, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Stick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x041A, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Stick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x041A, 1, 0x0001, 0x0006, 9, 2) /* XK-16 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x041A, 2, 0x0001, 0x0004, 12, 0) /* XK-16 Stick joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x041A, 3, 0x0001, 0x0002, 6, 0) /* XK-16 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x041B, 0, 0x000c, 0x0001, 33, 36) /* XK-16 Stick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x041B, 0, 0x000c, 0x0001, 33, 36) /* XK-16 Stick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x041B, 1, 0x0001, 0x0006, 9, 2) /* XK-16 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x041B, 2, 0x0001, 0x0004, 12, 0) /* XK-16 Stick joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E3, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Stick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E3, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Stick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E3, 1, 0x0001, 0x0006, 9, 2) /* XK-16 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E3, 2, 0x000c, 0x0001, 3, 0) /* XK-16 Stick multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E3, 3, 0x0001, 0x0080, 2, 0) /* XK-16 Stick multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E3, 4, 0x0001, 0x0002, 6, 0) /* XK-16 Stick mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0467, 0, 0x000c, 0x0001, 33, 36) /* XK-4 Stick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0467, 0, 0x000c, 0x0001, 33, 36) /* XK-4 Stick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0467, 1, 0x0001, 0x0006, 9, 2) /* XK-4 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0467, 2, 0x0001, 0x0002, 6, 0) /* XK-4 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0468, 0, 0x000c, 0x0001, 0, 36) /* XK-4 Stick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0468, 0, 0x000c, 0x0001, 0, 36) /* XK-4 Stick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0468, 1, 0x0001, 0x0006, 9, 2) /* XK-4 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0468, 2, 0x0001, 0x0004, 12, 0) /* XK-4 Stick joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0468, 3, 0x0001, 0x0002, 6, 0) /* XK-4 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0469, 0, 0x000c, 0x0001, 33, 36) /* XK-4 Stick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0469, 0, 0x000c, 0x0001, 33, 36) /* XK-4 Stick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0469, 1, 0x0001, 0x0006, 9, 2) /* XK-4 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0469, 2, 0x0001, 0x0004, 12, 0) /* XK-4 Stick joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E5, 0, 0x000c, 0x0001, 0, 36) /* XK-4 Stick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E5, 0, 0x000c, 0x0001, 0, 36) /* XK-4 Stick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E5, 1, 0x0001, 0x0006, 9, 2) /* XK-4 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E5, 2, 0x000c, 0x0001, 3, 0) /* XK-4 Stick multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E5, 3, 0x0001, 0x0080, 2, 0) /* XK-4 Stick multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E5, 4, 0x0001, 0x0002, 6, 0) /* XK-4 Stick mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x046A, 0, 0x000c, 0x0001, 33, 36) /* XK-8 Stick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x046A, 0, 0x000c, 0x0001, 33, 36) /* XK-8 Stick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046A, 1, 0x0001, 0x0006, 9, 2) /* XK-8 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046A, 2, 0x0001, 0x0002, 6, 0) /* XK-8 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x046B, 0, 0x000c, 0x0001, 0, 36) /* XK-8 Stick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x046B, 0, 0x000c, 0x0001, 0, 36) /* XK-8 Stick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046B, 1, 0x0001, 0x0006, 9, 2) /* XK-8 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046B, 2, 0x0001, 0x0004, 12, 0) /* XK-8 Stick joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046B, 3, 0x0001, 0x0002, 6, 0) /* XK-8 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x046C, 0, 0x000c, 0x0001, 33, 36) /* XK-8 Stick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x046C, 0, 0x000c, 0x0001, 33, 36) /* XK-8 Stick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046C, 1, 0x0001, 0x0006, 9, 2) /* XK-8 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x046C, 2, 0x0001, 0x0004, 12, 0) /* XK-8 Stick joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E4, 0, 0x000c, 0x0001, 0, 36) /* XK-8 Stick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E4, 0, 0x000c, 0x0001, 0, 36) /* XK-8 Stick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E4, 1, 0x0001, 0x0006, 9, 2) /* XK-8 Stick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E4, 2, 0x000c, 0x0001, 3, 0) /* XK-8 Stick multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E4, 3, 0x0001, 0x0080, 2, 0) /* XK-8 Stick multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E4, 4, 0x0001, 0x0002, 6, 0) /* XK-8 Stick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04CB, 0, 0x000c, 0x0001, 37, 36) /* XK-128 read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04CB, 0, 0x000c, 0x0001, 37, 36) /* XK-128 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CB, 1, 0x0001, 0x0004, 12, 0) /* XK-128 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CB, 2, 0x0001, 0x0002, 7, 0) /* XK-128 mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04CC, 0, 0x000c, 0x0001, 0, 36) /* XK-128 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04CC, 0, 0x000c, 0x0001, 0, 36) /* XK-128 write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CC, 1, 0x0001, 0x0006, 9, 2) /* XK-128 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CC, 2, 0x000c, 0x0001, 3, 0) /* XK-128 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CC, 3, 0x0001, 0x0080, 2, 0) /* XK-128 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CC, 4, 0x0001, 0x0002, 7, 0) /* XK-128 mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04CD, 0, 0x000c, 0x0001, 0, 36) /* XK-128 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04CD, 0, 0x000c, 0x0001, 0, 36) /* XK-128 write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CD, 1, 0x0001, 0x0004, 12, 0) /* XK-128 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CD, 2, 0x000c, 0x0001, 3, 0) /* XK-128 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CD, 3, 0x0001, 0x0080, 2, 0) /* XK-128 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CD, 4, 0x0001, 0x0002, 7, 0) /* XK-128 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04CE, 0, 0x000c, 0x0001, 37, 36) /* XK-128 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04CE, 0, 0x000c, 0x0001, 37, 36) /* XK-128 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CE, 1, 0x0001, 0x0006, 9, 2) /* XK-128 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CE, 2, 0x0001, 0x0002, 7, 0) /* XK-128 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0426, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Jog & Shuttle splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0426, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Jog & Shuttle read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0426, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Jog & Shuttle keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0426, 2, 0x0001, 0x0002, 6, 0) /* XK-12 Jog & Shuttle mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0427, 0, 0x000c, 0x0001, 0, 36) /* XK-12 Jog & Shuttle splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0427, 0, 0x000c, 0x0001, 0, 36) /* XK-12 Jog & Shuttle write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0427, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Jog & Shuttle keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0427, 2, 0x0001, 0x0004, 12, 0) /* XK-12 Jog & Shuttle joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0427, 3, 0x0001, 0x0002, 6, 0) /* XK-12 Jog & Shuttle mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0428, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Jog & Shuttle read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0428, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Jog & Shuttle read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0428, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Jog & Shuttle keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0428, 2, 0x0001, 0x0004, 12, 0) /* XK-12 Jog & Shuttle joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x045A, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Jog & Shuttle splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x045A, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Jog & Shuttle read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045A, 1, 0x0001, 0x0006, 9, 2) /* XK-68 Jog & Shuttle keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045A, 2, 0x0001, 0x0002, 6, 0) /* XK-68 Jog & Shuttle mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x045B, 0, 0x000c, 0x0001, 0, 36) /* XK-68 Jog & Shuttle splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x045B, 0, 0x000c, 0x0001, 0, 36) /* XK-68 Jog & Shuttle write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045B, 1, 0x0001, 0x0006, 9, 2) /* XK-68 Jog & Shuttle keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045B, 2, 0x0001, 0x0004, 12, 0) /* XK-68 Jog & Shuttle joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045B, 3, 0x0001, 0x0002, 6, 0) /* XK-68 Jog & Shuttle mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x045C, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Jog & Shuttle read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x045C, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Jog & Shuttle read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045C, 1, 0x0001, 0x0006, 9, 2) /* XK-68 Jog & Shuttle keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045C, 2, 0x0001, 0x0004, 12, 0) /* XK-68 Jog & Shuttle joystick*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0429, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Joystick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0429, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Joystick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0429, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Joystick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0429, 2, 0x0001, 0x0004, 12, 0) /* XK-12 Joystick joystick*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x042A, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Joystick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x042A, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Joystick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042A, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Joystick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042A, 2, 0x0001, 0x0004, 12, 0) /* XK-12 Joystick joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042A, 3, 0x0001, 0x0002, 6, 0) /* XK-12 Joystick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x042B, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Joystick read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x042B, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Joystick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042B, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Joystick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042B, 2, 0x0001, 0x0002, 6, 0) /* XK-12 Joystick mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x045D, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Joystick splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x045D, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Joystick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045D, 1, 0x0001, 0x0006, 9, 2) /* XK-68 Joystick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045D, 2, 0x0001, 0x0004, 12, 0) /* XK-68 Joystick joystick*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x045E, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Joystick splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x045E, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Joystick write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045E, 1, 0x0001, 0x0006, 9, 2) /* XK-68 Joystick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045E, 2, 0x0001, 0x0004, 12, 0) /* XK-68 Joystick joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045E, 3, 0x0001, 0x0002, 6, 0) /* XK-68 Joystick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x045F, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Joystick read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x045F, 0, 0x000c, 0x0001, 33, 36) /* XK-68 Joystick read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045F, 1, 0x0001, 0x0006, 9, 2) /* XK-68 Joystick keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x045F, 2, 0x0001, 0x0002, 6, 0) /* XK-68 Joystick mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x042C, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Front Hinged Footpedal splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x042C, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Front Hinged Footpedal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042C, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Front Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042C, 2, 0x0001, 0x0002, 6, 0) /* XK-3 Front Hinged Footpedal mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x042D, 0, 0x000c, 0x0001, 0, 36) /* XK-3 Front Hinged Footpedal splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x042D, 0, 0x000c, 0x0001, 0, 36) /* XK-3 Front Hinged Footpedal write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042D, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Front Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042D, 2, 0x0001, 0x0004, 12, 0) /* XK-3 Front Hinged Footpedal joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042D, 3, 0x0001, 0x0002, 6, 0) /* XK-3 Front Hinged Footpedal mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x042E, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Front Hinged Footpedal read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x042E, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Front Hinged Footpedal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042E, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Front Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x042E, 2, 0x0001, 0x0004, 12, 0) /* XK-3 Front Hinged Footpedal joystick*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0432, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Touch splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0432, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Touch read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0432, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Touch keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0432, 2, 0x0001, 0x0002, 6, 0) /* XK-12 Touch mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0433, 0, 0x000c, 0x0001, 0, 36) /* XK-12 Touch splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0433, 0, 0x000c, 0x0001, 0, 36) /* XK-12 Touch write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0433, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Touch keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0433, 2, 0x0001, 0x0004, 12, 0) /* XK-12 Touch joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0433, 3, 0x0001, 0x0002, 6, 0) /* XK-12 Touch mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0434, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Touch read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0434, 0, 0x000c, 0x0001, 33, 36) /* XK-12 Touch read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0434, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Touch keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0434, 2, 0x0001, 0x0004, 12, 0) /* XK-12 Touch joystick*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0438, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Rear Hinged Footpedal splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0438, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Rear Hinged Footpedal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0438, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Rear Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0438, 2, 0x0001, 0x0002, 6, 0) /* XK-3 Rear Hinged Footpedal mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0439, 0, 0x000c, 0x0001, 0, 36) /* XK-3 Rear Hinged Footpedal splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0439, 0, 0x000c, 0x0001, 0, 36) /* XK-3 Rear Hinged Footpedal write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0439, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Rear Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0439, 2, 0x0001, 0x0004, 12, 0) /* XK-3 Rear Hinged Footpedal joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0439, 3, 0x0001, 0x0002, 6, 0) /* XK-3 Rear Hinged Footpedal mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x043A, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Rear Hinged Footpedal splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x043A, 0, 0x000c, 0x0001, 33, 36) /* XK-3 Rear Hinged Footpedal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x043A, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Rear Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x043A, 2, 0x0001, 0x0004, 12, 0) /* XK-3 Rear Hinged Footpedal joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E8, 0, 0x000c, 0x0001, 0, 36) /* XK-3 Rear Hinged Footpedal splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E8, 0, 0x000c, 0x0001, 0, 36) /* XK-3 Rear Hinged Footpedal write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E8, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Rear Hinged Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E8, 2, 0x000c, 0x0001, 3, 0) /* XK-3 Rear Hinged Footpedal multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E8, 3, 0x0001, 0x0080, 2, 0) /* XK-3 Rear Hinged Footpedal multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E8, 4, 0x0001, 0x0002, 6, 0) /* XK-3 Rear Hinged Footpedal mouse*/
 	
-	DEVICE_MAP_ENTRY(PI_VID, 0x0441, 0, 0x000c, 0x0001, 33, 36) /* XK-80 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0441, 0, 0x000c, 0x0001, 33, 36) /* XK-80 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0441, 1, 0x0001, 0x0006, 9, 2) /* XK-80 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0441, 2, 0x0001, 0x0002, 6, 0) /* XK-80 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0442, 0, 0x000c, 0x0001, 0, 36) /* XK-80 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0442, 0, 0x000c, 0x0001, 0, 36) /* XK-80 write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0442, 1, 0x0001, 0x0006, 9, 2) /* XK-80 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0442, 2, 0x0001, 0x0004, 12, 0) /* XK-80 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0442, 3, 0x0001, 0x0002, 6, 0) /* XK-80 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0443, 0, 0x000c, 0x0001, 33, 36) /* XK-80 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0443, 0, 0x000c, 0x0001, 33, 36) /* XK-80 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0443, 1, 0x0001, 0x0006, 9, 2) /* XK-80 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0443, 2, 0x0001, 0x0004, 12, 0) /* XK-80 joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E2, 0, 0x000c, 0x0001, 0, 36) /* XK-80 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E2, 0, 0x000c, 0x0001, 0, 36) /* XK-80 write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E2, 1, 0x0001, 0x0006, 9, 2) /* XK-80 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E2, 2, 0x000c, 0x0001, 3, 0) /* XK-80 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E2, 3, 0x0001, 0x0080, 2, 0) /* XK-80 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E2, 4, 0x0001, 0x0002, 6, 0) /* XK-80 mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0461, 0, 0x000c, 0x0001, 33, 36) /* XK-60 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0461, 0, 0x000c, 0x0001, 33, 36) /* XK-60 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0461, 1, 0x0001, 0x0006, 9, 2) /* XK-60 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0461, 2, 0x0001, 0x0002, 6, 0) /* XK-60 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0462, 0, 0x000c, 0x0001, 0, 36) /* XK-60 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0462, 0, 0x000c, 0x0001, 0, 36) /* XK-60 write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0462, 1, 0x0001, 0x0006, 9, 2) /* XK-60 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0462, 2, 0x0001, 0x0004, 12, 0) /* XK-60 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0462, 3, 0x0001, 0x0002, 6, 0) /* XK-60 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0463, 0, 0x000c, 0x0001, 33, 36) /* XK-60 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0463, 0, 0x000c, 0x0001, 33, 36) /* XK-60 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0463, 1, 0x0001, 0x0006, 9, 2) /* XK-60 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0463, 2, 0x0001, 0x0004, 12, 0) /* XK-60 joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E6, 0, 0x000c, 0x0001, 0, 36) /* XK-60 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E6, 0, 0x000c, 0x0001, 0, 36) /* XK-60 write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E6, 1, 0x0001, 0x0006, 9, 2) /* XK-60 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E6, 2, 0x000c, 0x0001, 3, 0) /* XK-60 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E6, 3, 0x0001, 0x0080, 2, 0) /* XK-60 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E6, 4, 0x0001, 0x0002, 6, 0) /* XK-60 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0268, 0, 0x000c, 0x0001, 19, 9) /* Footpedal SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x026A, 0, 0x000c, 0x0001, 19, 9) /* Matrix SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0271, 0, 0x000c, 0x0001, 12, 9) /* Stick SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0281, 0, 0x000c, 0x0001, 12, 9) /* Desktop SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0291, 0, 0x000c, 0x0001, 12, 9) /* Professional SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0241, 0, 0x000c, 0x0001, 15, 9) /* Jog & Shuttle SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0251, 0, 0x000c, 0x0001, 15, 9) /* Joystick Pro SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0269, 0, 0x000c, 0x0001, 19, 9) /* Switch Interface SE splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0305, 0, 0x000c, 0x0001, 32, 9) /* 128 w Mag Strip splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0306, 0, 0x000c, 0x0001, 32, 9) /* 128 no reader splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0307, 0, 0x000c, 0x0001, 32, 9) /* 128 w Bar Code splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0308, 0, 0x000c, 0x0001, 32, 9) /* 84 w Mag Strip splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0309, 0, 0x000c, 0x0001, 32, 9) /* 84 no reader splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x030A, 0, 0x000c, 0x0001, 32, 9) /* 84 w Bar Code splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0301, 0, 0x000c, 0x0001, 32, 9) /* LCD w Mag Strip splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0302, 0, 0x000c, 0x0001, 32, 9) /* LCD no reader splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x0303, 0, 0x000c, 0x0001, 32, 9) /* LCD w Bar Code splat read and write*/
-	DEVICE_MAP_ENTRY(PI_VID, 0x00D2, 0, 0x000c, 0x0001, 15, 9) /* Raildriver splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0268, 0, 0x000c, 0x0001, 19, 9) /* Footpedal SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x026A, 0, 0x000c, 0x0001, 19, 9) /* Matrix SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0271, 0, 0x000c, 0x0001, 12, 9) /* Stick SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0281, 0, 0x000c, 0x0001, 12, 9) /* Desktop SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0291, 0, 0x000c, 0x0001, 12, 9) /* Professional SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0241, 0, 0x000c, 0x0001, 15, 9) /* Jog & Shuttle SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0251, 0, 0x000c, 0x0001, 15, 9) /* Joystick Pro SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0269, 0, 0x000c, 0x0001, 19, 9) /* Switch Interface SE read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0305, 0, 0x000c, 0x0001, 32, 9) /* 128 w Mag Strip read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0306, 0, 0x000c, 0x0001, 32, 9) /* 128 no reader read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0307, 0, 0x000c, 0x0001, 32, 9) /* 128 w Bar Code read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0308, 0, 0x000c, 0x0001, 32, 9) /* 84 w Mag Strip read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0309, 0, 0x000c, 0x0001, 32, 9) /* 84 no reader read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x030A, 0, 0x000c, 0x0001, 32, 9) /* 84 w Bar Code read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0301, 0, 0x000c, 0x0001, 32, 9) /* LCD w Mag Strip read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0302, 0, 0x000c, 0x0001, 32, 9) /* LCD no reader read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0303, 0, 0x000c, 0x0001, 32, 9) /* LCD w Bar Code read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x00D2, 0, 0x000c, 0x0001, 15, 9) /* Raildriver read and write (aka PI Consumer)*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x02B5, 0, 0x000c, 0x0001, 32, 8) /* Stick MWII splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x02B5, 0, 0x000c, 0x0001, 32, 8) /* Stick MWII read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02B6, 1, 0x0001, 0x0006, 9, 2) /* Stick MWII keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02B6, 2, 0x0001, 0x0002, 6, 0) /* Stick MWII mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x02A5, 0, 0x000c, 0x0001, 32, 8) /* Desktop MWII splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x02A5, 0, 0x000c, 0x0001, 32, 8) /* Desktop MWII read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02A6, 1, 0x0001, 0x0006, 9, 2) /* Desktop MWII keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02A6, 2, 0x0001, 0x0002, 6, 0) /* Desktop MWII mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x02A7, 0, 0x000c, 0x0001, 32, 8) /* Professional MWII splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x02A7, 0, 0x000c, 0x0001, 32, 8) /* Professional MWII read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02A8, 1, 0x0001, 0x0006, 9, 2) /* Professional MWII keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02A8, 2, 0x0001, 0x0002, 6, 0) /* Professional MWII mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x02B1, 0, 0x000c, 0x0001, 32, 8) /* Jog & Shuttle MWII splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x02B1, 0, 0x000c, 0x0001, 32, 8) /* Jog & Shuttle MWII read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02B2, 1, 0x0001, 0x0006, 9, 2) /* Jog & Shuttle MWII keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02B2, 2, 0x0001, 0x0002, 6, 0) /* Jog & Shuttle MWII mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x02B7, 0, 0x000c, 0x0001, 32, 8) /* Switch Interface MWII splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x02B7, 0, 0x000c, 0x0001, 32, 8) /* Switch Interface MWII read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02B8, 1, 0x0001, 0x0006, 9, 2) /* Switch Interface MWII keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x02B8, 2, 0x0001, 0x0002, 6, 0) /* Switch Interface MWII mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04A8, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-12 Switch Interface read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04A8, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-12 Switch Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04A8, 1, 0x0001, 0x0004, 0x000C, 0x0000) /* XK-12 Switch Interface joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04A8, 2, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-12 Switch Interface mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04A9, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-12 Switch Interface splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04A9, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-12 Switch Interface write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04A9, 1, 0x0001, 0x0006, 0x0009, 0x0002) /* XK-12 Switch Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04A9, 2, 0x000c, 0x0001, 0x0003, 0x0000) /* XK-12 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04A9, 3, 0x0001, 0x0080, 0x0002, 0x0000) /* XK-12 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04A9, 4, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-12 Switch Interface mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04AA, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-12 Switch Interface splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04AA, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-12 Switch Interface write only*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AA, 1, 0x0001, 0x0004, 0x000C, 0x0000) /* XK-12 Switch Interface joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AA, 2, 0x000c, 0x0001, 0x0003, 0x0000) /* XK-12 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AA, 3, 0x0001, 0x0080, 0x0002, 0x0000) /* XK-12 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AA, 4, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-12 Switch Interface mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04AB, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-12 Switch Interface splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04AB, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-12 Switch Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AB, 1, 0x0001, 0x0006, 0x0009, 0x000C) /* XK-12 Switch Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AB, 2, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-12 Switch Interface mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C5, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-3 Switch Interface read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C5, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-3 Switch Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C5, 1, 0x0001, 0x0004, 0x000C, 0x0000) /* XK-3 Switch Interface joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C5, 2, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-3 Switch Interface mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C6, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-3 Switch Interface splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C6, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-3 Switch Interface write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C6, 1, 0x0001, 0x0006, 0x0009, 0x0002) /* XK-3 Switch Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C6, 2, 0x000c, 0x0001, 0x0003, 0x0000) /* XK-3 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C6, 3, 0x0001, 0x0080, 0x0002, 0x0000) /* XK-3 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C6, 4, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-3 Switch Interface mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C7, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-3 Switch Interface splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C7, 0, 0x000c, 0x0001, 0x0000, 0x0024) /* XK-3 Switch Interface write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C7, 1, 0x0001, 0x0004, 0x000C, 0x0000) /* XK-3 Switch Interface joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C7, 2, 0x000c, 0x0001, 0x0003, 0x0000) /* XK-3 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C7, 3, 0x0001, 0x0080, 0x0002, 0x0000) /* XK-3 Switch Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C7, 4, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-3 Switch Interface mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C8, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-3 Switch Interface splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C8, 0, 0x000c, 0x0001, 0x0025, 0x0024) /* XK-3 Switch Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C8, 1, 0x0001, 0x0006, 0x0009, 0x000C) /* XK-3 Switch Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C8, 2, 0x0001, 0x0002, 0x0007, 0x0000) /* XK-3 Switch Interface mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04FF, 0, 0x000c, 0x0001, 37, 36) /* XK-32 Rack Mount read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04FF, 0, 0x000c, 0x0001, 37, 36) /* XK-32 Rack Mount read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FF, 1, 0x0001, 0x0004, 12, 0) /* XK-32 Rack Mount joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FF, 2, 0x0001, 0x0002, 7, 0) /* XK-32 Rack Mount mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0500, 0, 0x000c, 0x0001, 0, 36) /* XK-32 Rack Mount splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0500, 0, 0x000c, 0x0001, 0, 36) /* XK-32 Rack Mount write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0500, 1, 0x0001, 0x0006, 9, 2) /* XK-32 Rack Mount keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0500, 2, 0x000c, 0x0001, 3, 0) /* XK-32 Rack Mount multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0500, 3, 0x0001, 0x0080, 2, 0) /* XK-32 Rack Mount multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0500, 4, 0x0001, 0x0002, 7, 0) /* XK-32 Rack Mount mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0501, 0, 0x000c, 0x0001, 0, 36) /* XK-32 Rack Mount splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0501, 0, 0x000c, 0x0001, 0, 36) /* XK-32 Rack Mount write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0501, 1, 0x0001, 0x0004, 12, 0) /* XK-32 Rack Mount joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0501, 2, 0x000c, 0x0001, 3, 0) /* XK-32 Rack Mount multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0501, 3, 0x0001, 0x0080, 2, 0) /* XK-32 Rack Mount multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0501, 4, 0x0001, 0x0002, 7, 0) /* XK-32 Rack Mount mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0502, 0, 0x000c, 0x0001, 37, 36) /* XK-32 Rack Mount splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0502, 0, 0x000c, 0x0001, 37, 36) /* XK-32 Rack Mount read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0502, 1, 0x0001, 0x0006, 9, 2) /* XK-32 Rack Mount keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0502, 2, 0x0001, 0x0002, 7, 0) /* XK-32 Rack Mount mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x049C, 0, 0x000c, 0x0001, 37, 36) /* XK-24 Android read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x049C, 0, 0x000c, 0x0001, 37, 36) /* XK-24 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049C, 1, 0x0001, 0x0004, 12, 0) /* XK-24 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049C, 2, 0x0001, 0x0002, 7, 0) /* XK-24 Android mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x049D, 0, 0x000c, 0x0001, 0, 36) /* XK-24 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x049D, 0, 0x000c, 0x0001, 0, 36) /* XK-24 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049D, 1, 0x0001, 0x0006, 9, 2) /* XK-24 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049D, 2, 0x000c, 0x0001, 3, 0) /* XK-24 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049D, 3, 0x0001, 0x0080, 2, 0) /* XK-24 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049D, 4, 0x0001, 0x0002, 7, 0) /* XK-24 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x049E, 0, 0x000c, 0x0001, 0, 36) /* XK-24 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x049E, 0, 0x000c, 0x0001, 0, 36) /* XK-24 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049E, 1, 0x0001, 0x0004, 12, 0) /* XK-24 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049E, 2, 0x000c, 0x0001, 3, 0) /* XK-24 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049E, 3, 0x0001, 0x0080, 2, 0) /* XK-24 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049E, 4, 0x0001, 0x0002, 7, 0) /* XK-24 Android mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x049F, 0, 0x000c, 0x0001, 37, 36) /* XK-24 Android splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x049F, 0, 0x000c, 0x0001, 37, 36) /* XK-24 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049F, 1, 0x0001, 0x0006, 9, 2) /* XK-24 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x049F, 2, 0x0001, 0x0002, 7, 0) /* XK-24 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C1, 0, 0x000c, 0x0001, 37, 36) /* XK-80 Android read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C1, 0, 0x000c, 0x0001, 37, 36) /* XK-80 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C1, 1, 0x0001, 0x0004, 12, 0) /* XK-80 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C1, 2, 0x0001, 0x0002, 7, 0) /* XK-80 Android mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C2, 0, 0x000c, 0x0001, 0, 36) /* XK-80 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C2, 0, 0x000c, 0x0001, 0, 36) /* XK-80 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C2, 1, 0x0001, 0x0006, 9, 2) /* XK-80 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C2, 2, 0x000c, 0x0001, 3, 0) /* XK-80 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C2, 3, 0x0001, 0x0080, 2, 0) /* XK-80 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C2, 4, 0x0001, 0x0002, 7, 0) /* XK-80 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C3, 0, 0x000c, 0x0001, 0, 36) /* XK-80 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C3, 0, 0x000c, 0x0001, 0, 36) /* XK-80 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C3, 1, 0x0001, 0x0004, 12, 0) /* XK-80 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C3, 2, 0x000c, 0x0001, 3, 0) /* XK-80 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C3, 3, 0x0001, 0x0080, 2, 0) /* XK-80 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C3, 4, 0x0001, 0x0002, 7, 0) /* XK-80 Android mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C4, 0, 0x000c, 0x0001, 37, 36) /* XK-80 Android splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C4, 0, 0x000c, 0x0001, 37, 36) /* XK-80 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C4, 1, 0x0001, 0x0006, 9, 2) /* XK-80 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C4, 2, 0x0001, 0x0002, 7, 0) /* XK-80 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04CF, 0, 0x000c, 0x0001, 37, 36) /* XK-60 Android read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04CF, 0, 0x000c, 0x0001, 37, 36) /* XK-60 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CF, 1, 0x0001, 0x0004, 12, 0) /* XK-60 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04CF, 2, 0x0001, 0x0002, 7, 0) /* XK-60 Android mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04D0, 0, 0x000c, 0x0001, 0, 36) /* XK-60 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04D0, 0, 0x000c, 0x0001, 0, 36) /* XK-60 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D0, 1, 0x0001, 0x0006, 9, 2) /* XK-60 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D0, 2, 0x000c, 0x0001, 3, 0) /* XK-60 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D0, 3, 0x0001, 0x0080, 2, 0) /* XK-60 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D0, 4, 0x0001, 0x0002, 7, 0) /* XK-60 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04D1, 0, 0x000c, 0x0001, 0, 36) /* XK-60 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04D1, 0, 0x000c, 0x0001, 0, 36) /* XK-60 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D1, 1, 0x0001, 0x0004, 12, 0) /* XK-60 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D1, 2, 0x000c, 0x0001, 3, 0) /* XK-60 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D1, 3, 0x0001, 0x0080, 2, 0) /* XK-60 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D1, 4, 0x0001, 0x0002, 7, 0) /* XK-60 Android mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04D2, 0, 0x000c, 0x0001, 37, 36) /* XK-60 Android splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04D2, 0, 0x000c, 0x0001, 37, 36) /* XK-60 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D2, 1, 0x0001, 0x0006, 9, 2) /* XK-60 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D2, 2, 0x0001, 0x0002, 7, 0) /* XK-60 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04BD, 0, 0x000c, 0x0001, 37, 36) /* XK-16 Android read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04BD, 0, 0x000c, 0x0001, 37, 36) /* XK-16 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BD, 1, 0x0001, 0x0004, 12, 0) /* XK-16 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BD, 2, 0x0001, 0x0002, 7, 0) /* XK-16 Android mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04BE, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04BE, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BE, 1, 0x0001, 0x0006, 9, 2) /* XK-16 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BE, 2, 0x000c, 0x0001, 3, 0) /* XK-16 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BE, 3, 0x0001, 0x0080, 2, 0) /* XK-16 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BE, 4, 0x0001, 0x0002, 7, 0) /* XK-16 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04BF, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Android splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04BF, 0, 0x000c, 0x0001, 0, 36) /* XK-16 Android write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BF, 1, 0x0001, 0x0004, 12, 0) /* XK-16 Android joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BF, 2, 0x000c, 0x0001, 3, 0) /* XK-16 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BF, 3, 0x0001, 0x0080, 2, 0) /* XK-16 Android multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04BF, 4, 0x0001, 0x0002, 7, 0) /* XK-16 Android mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C0, 0, 0x000c, 0x0001, 37, 36) /* XK-16 Android splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C0, 0, 0x000c, 0x0001, 37, 36) /* XK-16 Android read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C0, 1, 0x0001, 0x0006, 9, 2) /* XK-16 Android keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C0, 2, 0x0001, 0x0002, 7, 0) /* XK-16 Android mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04AC, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Matrix Board read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04AC, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Matrix Board read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AC, 1, 0x0001, 0x0004, 12, 0) /* Pi4 Matrix Board joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AC, 2, 0x0001, 0x0002, 7, 0) /* Pi4 Matrix Board mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04AD, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Matrix Board splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04AD, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Matrix Board write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AD, 1, 0x0001, 0x0006, 9, 2) /* Pi4 Matrix Board keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AD, 2, 0x000c, 0x0001, 3, 0) /* Pi4 Matrix Board multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AD, 3, 0x0001, 0x0080, 2, 0) /* Pi4 Matrix Board multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AD, 4, 0x0001, 0x0002, 7, 0) /* Pi4 Matrix Board mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04AE, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Matrix Board splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04AE, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Matrix Board write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AE, 1, 0x0001, 0x0004, 12, 0) /* Pi4 Matrix Board joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AE, 2, 0x000c, 0x0001, 3, 0) /* Pi4 Matrix Board multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AE, 3, 0x0001, 0x0080, 2, 0) /* Pi4 Matrix Board multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AE, 4, 0x0001, 0x0002, 7, 0) /* Pi4 Matrix Board mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04AF, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Matrix Board splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04AF, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Matrix Board read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AF, 1, 0x0001, 0x0006, 9, 2) /* Pi4 Matrix Board keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04AF, 2, 0x0001, 0x0002, 7, 0) /* Pi4 Matrix Board mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B0, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Footpedal read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B0, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Footpedal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B0, 1, 0x0001, 0x0004, 12, 0) /* Pi4 Footpedal joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B0, 2, 0x0001, 0x0002, 7, 0) /* Pi4 Footpedal mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B1, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Footpedal splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B1, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Footpedal write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B1, 1, 0x0001, 0x0006, 9, 2) /* Pi4 Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B1, 2, 0x000c, 0x0001, 3, 0) /* Pi4 Footpedal multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B1, 3, 0x0001, 0x0080, 2, 0) /* Pi4 Footpedal multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B1, 4, 0x0001, 0x0002, 7, 0) /* Pi4 Footpedal mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B2, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Footpedal splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B2, 0, 0x000c, 0x0001, 0, 36) /* Pi4 Footpedal write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B2, 1, 0x0001, 0x0004, 12, 0) /* Pi4 Footpedal joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B2, 2, 0x000c, 0x0001, 3, 0) /* Pi4 Footpedal multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B2, 3, 0x0001, 0x0080, 2, 0) /* Pi4 Footpedal multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B2, 4, 0x0001, 0x0002, 7, 0) /* Pi4 Footpedal mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B3, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Footpedal splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B3, 0, 0x000c, 0x0001, 37, 36) /* Pi4 Footpedal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B3, 1, 0x0001, 0x0006, 9, 2) /* Pi4 Footpedal keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B3, 2, 0x0001, 0x0002, 7, 0) /* Pi4 Footpedal mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B4, 0, 0x000c, 0x0001, 37, 36) /* RS485 read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B4, 0, 0x000c, 0x0001, 37, 36) /* RS485 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B4, 1, 0x0001, 0x0004, 12, 0) /* RS485 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B4, 2, 0x0001, 0x0002, 7, 0) /* RS485 mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B5, 0, 0x000c, 0x0001, 0, 36) /* RS485 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B5, 0, 0x000c, 0x0001, 0, 36) /* RS485 write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B5, 1, 0x0001, 0x0006, 9, 2) /* RS485 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B5, 2, 0x000c, 0x0001, 3, 0) /* RS485 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B5, 3, 0x0001, 0x0080, 2, 0) /* RS485 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B5, 4, 0x0001, 0x0002, 7, 0) /* RS485 mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B6, 0, 0x000c, 0x0001, 0, 36) /* RS485 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B6, 0, 0x000c, 0x0001, 0, 36) /* RS485 write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B6, 1, 0x0001, 0x0004, 12, 0) /* RS485 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B6, 2, 0x000c, 0x0001, 3, 0) /* RS485 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B6, 3, 0x0001, 0x0080, 2, 0) /* RS485 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B6, 4, 0x0001, 0x0002, 7, 0) /* RS485 mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04B7, 0, 0x000c, 0x0001, 37, 36) /* RS485 splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04B7, 0, 0x000c, 0x0001, 37, 36) /* RS485 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B7, 1, 0x0001, 0x0006, 9, 2) /* RS485 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04B7, 2, 0x0001, 0x0002, 7, 0) /* RS485 mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04DC, 0, 0x000c, 0x0001, 37, 36) /* IAB-HD15-Wire Interface read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04DC, 0, 0x000c, 0x0001, 37, 36) /* IAB-HD15-Wire Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DC, 1, 0x0001, 0x0004, 12, 0) /* IAB-HD15-Wire Interface joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DC, 2, 0x0001, 0x0002, 7, 0) /* IAB-HD15-Wire Interface mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04DD, 0, 0x000c, 0x0001, 0, 36) /* IAB-HD15-Wire Interface splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04DD, 0, 0x000c, 0x0001, 0, 36) /* IAB-HD15-Wire Interface write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DD, 1, 0x0001, 0x0006, 9, 2) /* IAB-HD15-Wire Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DD, 2, 0x000c, 0x0001, 3, 0) /* IAB-HD15-Wire Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DD, 3, 0x0001, 0x0080, 2, 0) /* IAB-HD15-Wire Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DD, 4, 0x0001, 0x0002, 7, 0) /* IAB-HD15-Wire Interface mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04DE, 0, 0x000c, 0x0001, 0, 36) /* IAB-HD15-Wire Interface splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04DE, 0, 0x000c, 0x0001, 0, 36) /* IAB-HD15-Wire Interface write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DE, 1, 0x0001, 0x0004, 12, 0) /* IAB-HD15-Wire Interface joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DE, 2, 0x000c, 0x0001, 3, 0) /* IAB-HD15-Wire Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DE, 3, 0x0001, 0x0080, 2, 0) /* IAB-HD15-Wire Interface multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DE, 4, 0x0001, 0x0002, 7, 0) /* IAB-HD15-Wire Interface mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04DF, 0, 0x000c, 0x0001, 37, 36) /* IAB-HD15-Wire Interface splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04DF, 0, 0x000c, 0x0001, 37, 36) /* IAB-HD15-Wire Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DF, 1, 0x0001, 0x0006, 9, 2) /* IAB-HD15-Wire Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04DF, 2, 0x0001, 0x0002, 7, 0) /* IAB-HD15-Wire Interface mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04E9, 0, 0x000c, 0x0001, 37, 36) /* RS232 read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04E9, 0, 0x000c, 0x0001, 37, 36) /* RS232 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E9, 1, 0x0001, 0x0004, 12, 0) /* RS232 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04E9, 2, 0x0001, 0x0002, 7, 0) /* RS232 mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04EA, 0, 0x000c, 0x0001, 0, 36) /* RS232 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04EA, 0, 0x000c, 0x0001, 0, 36) /* RS232 write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EA, 1, 0x0001, 0x0006, 9, 2) /* RS232 keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EA, 2, 0x000c, 0x0001, 3, 0) /* RS232 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EA, 3, 0x0001, 0x0080, 2, 0) /* RS232 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EA, 4, 0x0001, 0x0002, 7, 0) /* RS232 mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04EB, 0, 0x000c, 0x0001, 0, 36) /* RS232 splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04EB, 0, 0x000c, 0x0001, 0, 36) /* RS232 write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EB, 1, 0x0001, 0x0004, 12, 0) /* RS232 joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EB, 2, 0x000c, 0x0001, 3, 0) /* RS232 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EB, 3, 0x0001, 0x0080, 2, 0) /* RS232 multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EB, 4, 0x0001, 0x0002, 7, 0) /* RS232 Interface mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04EC, 0, 0x000c, 0x0001, 37, 36) /* RS232 Interface splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04EC, 0, 0x000c, 0x0001, 37, 36) /* RS232 Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EC, 1, 0x0001, 0x0006, 9, 2) /* RS232 Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04EC, 2, 0x0001, 0x0002, 7, 0) /* RS232 mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04FB, 0, 0x000c, 0x0001, 37, 36) /* XK-124 Tbar read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04FB, 0, 0x000c, 0x0001, 37, 36) /* XK-124 Tbar read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FB, 1, 0x0001, 0x0004, 12, 0) /* XK-124 Tbar joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FB, 2, 0x0001, 0x0002, 7, 0) /* XK-124 Tbar mouse*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04FC, 0, 0x000c, 0x0001, 0, 36) /* XK-124 Tbar splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04FC, 0, 0x000c, 0x0001, 0, 36) /* XK-124 Tbar write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FC, 1, 0x0001, 0x0006, 9, 2) /* XK-124 Tbar keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FC, 2, 0x000c, 0x0001, 3, 0) /* XK-124 Tbar multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FC, 3, 0x0001, 0x0080, 2, 0) /* XK-124 Tbar multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FC, 4, 0x0001, 0x0002, 7, 0) /* XK-124 Tbar mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04FD, 0, 0x000c, 0x0001, 0, 36) /* XK-124 Tbar splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04FD, 0, 0x000c, 0x0001, 0, 36) /* XK-124 Tbar write (aka PI Consumer Output)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FD, 1, 0x0001, 0x0004, 12, 0) /* XK-124 Tbar joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FD, 2, 0x000c, 0x0001, 3, 0) /* XK-124 Tbar multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FD, 3, 0x0001, 0x0080, 2, 0) /* XK-124 Tbar multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FD, 4, 0x0001, 0x0002, 7, 0) /* XK-124 Tbar Interface mouse*/
 	 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04FE, 0, 0x000c, 0x0001, 37, 36) /* XK-124 Tbar Interface splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04FE, 0, 0x000c, 0x0001, 37, 36) /* XK-124 Tbar Interface read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FE, 1, 0x0001, 0x0006, 9, 2) /* XK-124 Tbar Interface keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04FE, 2, 0x0001, 0x0002, 7, 0) /* XK-124 Tbar mouse*/
 	
-	DEVICE_MAP_ENTRY(PI_VID, 0x04C9, 0, 0x000c, 0x0001, 37, 36) /* XC-DMX512-RJ45  splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04C9, 0, 0x000c, 0x0001, 37, 36) /* XC-DMX512-RJ45 read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04C9, 1, 0x0001, 0x0006, 9, 2) /* XC-DMX512-RJ45 Interface keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x052C, 0, 0x000c, 0x0001, 37, 36) /* XC-DMX512 Screw Terminal splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052C, 0, 0x000c, 0x0001, 37, 36) /* XC-DMX512 Screw Terminal read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x052C, 1, 0x0001, 0x0006, 9, 2) /* XC-DMX512 Screw Terminal keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04D3, 0, 0x000c, 0x0001, 37, 36) /* XK-24 KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04D3, 0, 0x000c, 0x0001, 37, 36) /* XK-24 KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D3, 1, 0x0001, 0x0006, 9, 2) /* XK-24 KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D3, 2, 0x0001, 0x0004, 12, 0) /* XK-24 KVM joystick*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D4, 0, 0x0001, 0x0006, 9, 2) /* XK-24 KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04D5, 0, 0x000c, 0x0001, 37, 36) /* XK-80 KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04D5, 0, 0x000c, 0x0001, 37, 36) /* XK-80 KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D5, 1, 0x0001, 0x0006, 9, 2) /* XK-80 KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D5, 2, 0x0001, 0x0002, 6, 0) /* XK-80 KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D6, 0, 0x0001, 0x0006, 9, 2) /* XK-80 KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04D7, 0, 0x000c, 0x0001, 37, 36) /* XK-60 KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04D7, 0, 0x000c, 0x0001, 37, 36) /* XK-60 KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D7, 1, 0x0001, 0x0006, 9, 2) /* XK-60 KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D7, 2, 0x0001, 0x0002, 6, 0) /* XK-16 KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x04D8, 0, 0x0001, 0x0006, 9, 2) /* XK-60 KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x04F5, 0, 0x000c, 0x0001, 37, 36) /* XK-16 KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x04F5, 0, 0x000c, 0x0001, 37, 36) /* XK-16 KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04F5, 1, 0x0001, 0x0006, 9, 2) /* XK-16 KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x04F5, 2, 0x0001, 0x0002, 6, 0) /* XK-16 KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x04F6, 0, 0x0001, 0x0006, 9, 2) /* XK-16 KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0503, 0, 0x000c, 0x0001, 37, 36) /* XK-32 Rack Mount KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0503, 0, 0x000c, 0x0001, 37, 36) /* XK-32 Rack Mount KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0503, 1, 0x0001, 0x0006, 9, 2) /* XK-32 Rack Mount KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0503, 2, 0x0001, 0x0002, 7, 0) /* XK-32 Rack Mount KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x0504, 0, 0x0001, 0x0006, 9, 2) /* XK-32 Rack Mount KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x050A, 0, 0x000c, 0x0001, 37, 36) /* XK-128 KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x050A, 0, 0x000c, 0x0001, 37, 36) /* XK-128 KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x050A, 1, 0x0001, 0x0006, 9, 2) /* XK-128 KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x050A, 2, 0x0001, 0x0002, 7, 0) /* XK-128 KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x050B, 0, 0x0001, 0x0006, 9, 2) /* XK-128 KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0514, 0, 0x000c, 0x0001, 37, 36) /* XK-3 Switch Interface KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0514, 0, 0x000c, 0x0001, 37, 36) /* XK-3 Switch Interface KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0514, 1, 0x0001, 0x0006, 9, 2) /* XK-3 Switch Interface KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0514, 2, 0x0001, 0x0002, 7, 0) /* XK-3 Switch Interface KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x0515, 0, 0x0001, 0x0006, 9, 2) /* XK-3 Switch Interface KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0516, 0, 0x000c, 0x0001, 37, 36) /* XK-12 Switch Interface KVM splat read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0516, 0, 0x000c, 0x0001, 37, 36) /* XK-12 Switch Interface KVM read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0516, 1, 0x0001, 0x0006, 9, 2) /* XK-12 Switch Interface KVM keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0516, 2, 0x0001, 0x0002, 7, 0) /* XK-12 Switch Interface KVM mouse*/
 
 	DEVICE_MAP_ENTRY(PI_VID, 0x0517, 0, 0x0001, 0x0006, 9, 2) /* XK-12 Switch Interface KVM keyboard*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0524, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0524, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0524, 1, 0x0001, 0x0006, 9, 2) /* XK-16 LCD keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0524, 2, 0x000c, 0x0001, 3, 0) /* XK-16 LCD multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0524, 3, 0x0001, 0x0080, 2, 0) /* XK-16 LCD multimedia*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0525, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0525, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0525, 1, 0x0001, 0x0006, 9, 2) /* XK-16 LCD keyboard boot*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0525, 2, 0x000c, 0x0001, 3, 0) /* XK-16 LCD multimedia*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0525, 3, 0x0001, 0x0080, 2, 0) /* XK-16 LCD multimedia*/
 		 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0526, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0526, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0526, 1, 0x0001, 0x0006, 9, 2) /* XK-16 LCD keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0526, 2, 0x0001, 0x0004, 12, 0) /* XK-16 LCD joystick*/
 	
-	DEVICE_MAP_ENTRY(PI_VID, 0x0527, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0527, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0527, 1, 0x0001, 0x0002, 7, 0) /* XK-16 LCD mouse*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0527, 2, 0x0001, 0x0004, 12, 0) /* XK-16 LCD joystick*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0528, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0528, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0528, 1, 0x0001, 0x0006, 9, 2) /* XK-16 LCD keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x0528, 2, 0x0001, 0x0002, 7, 0) /* XK-16 LCD mouse*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x0529, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0529, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 
-	DEVICE_MAP_ENTRY(PI_VID, 0x052A, 0, 0x000c, 0x0001, 0, 36) /* XK-16 LCD splat write only*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052A, 0, 0x000c, 0x0001, 37, 36) /* XK-16 LCD read and write (aka PI Consumer)*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x052A, 1, 0x0001, 0x0006, 9, 2) /* XK-16 LCD keyboard*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x052A, 2, 0x0001, 0x0004, 12, 0) /* XK-16 LCD joystick*/
 	DEVICE_MAP_ENTRY(PI_VID, 0x052A, 3, 0x0001, 0x0002, 7, 0) /* XK-16 LCD mouse*/
@@ -2058,6 +2238,191 @@ static const struct device_map_entry device_map[] = {
 	DEVICE_MAP_ENTRY(PI_VID, 0x052A, 5, 0x0001, 0x0080, 2, 0) /* XK-16 LCD multimedia*/
 	
 	DEVICE_MAP_ENTRY(PI_VID, 0x052B, 0, 0x0001, 0x0006, 9, 2) /* XK-16 LCD keyboard boot (KVM)*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x052D, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052D, 1, 0x0001, 0x0006, 9, 2) /* XKE-64 Jog T-bar keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052D, 2, 0x000c, 0x0001, 3, 0) /* XKE-64 Jog T-bar multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052D, 3, 0x0001, 0x0080, 2, 0) /* XKE-64 Jog T-bar multimedia*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x052E, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052E, 1, 0x0001, 0x0006, 9, 2) /* XKE-64 Jog T-bar keyboard boot*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052E, 2, 0x000c, 0x0001, 3, 0) /* XKE-64 Jog T-bar multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052E, 3, 0x0001, 0x0080, 2, 0) /* XKE-64 Jog T-bar multimedia*/
+		 
+	DEVICE_MAP_ENTRY(PI_VID, 0x052F, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052F, 1, 0x0001, 0x0006, 9, 2) /* XKE-64 Jog T-bar keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x052F, 2, 0x0001, 0x0004, 12, 0) /* XKE-64 Jog T-bar joystick*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0530, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0530, 1, 0x0001, 0x0002, 7, 0) /* XKE-64 Jog T-bar mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0530, 2, 0x0001, 0x0004, 12, 0) /* XKE-64 Jog T-bar joystick*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0531, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0531, 1, 0x0001, 0x0006, 9, 2) /* XKE-64 Jog T-bar keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0531, 2, 0x0001, 0x0002, 7, 0) /* XKE-64 Jog T-bar mouse*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0532, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0533, 0, 0x000c, 0x0001, 37, 36) /* XKE-64 Jog T-bar read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0533, 1, 0x0001, 0x0006, 9, 2) /* XKE-64 Jog T-bar keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0533, 2, 0x0001, 0x0004, 12, 0) /* XKE-64 Jog T-bar joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0533, 3, 0x0001, 0x0002, 7, 0) /* XKE-64 Jog T-bar mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0533, 4, 0x000c, 0x0001, 3, 0) /* XKE-64 Jog T-bar multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0533, 5, 0x0001, 0x0080, 2, 0) /* XKE-64 Jog T-bar multimedia*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0534, 0, 0x0001, 0x0006, 9, 2) /* XKE-64 Jog T-bar keyboard boot (KVM)*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0547, 0, 0x000c, 0x0001, 37, 36) /* IAB-HD15-GPIO read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0547, 1, 0x0001, 0x0004, 12, 0) /* IAB-HD15-GPIO joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0547, 2, 0x0001, 0x0002, 7, 0) /* IAB-HD15-GPIO mouse*/
+		 
+	DEVICE_MAP_ENTRY(PI_VID, 0x0548, 0, 0x000c, 0x0001, 0, 36) /* IAB-HD15-GPIO write (aka PI Consumer Output)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0548, 1, 0x0001, 0x0006, 9, 2) /* IAB-HD15-GPIO keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0548, 2, 0x000c, 0x0001, 3, 0) /* IAB-HD15-GPIO multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0548, 3, 0x0001, 0x0080, 2, 0) /* IAB-HD15-GPIO multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0548, 4, 0x0001, 0x0002, 7, 0) /* IAB-HD15-GPIO mouse*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0549, 0, 0x000c, 0x0001, 0, 36) /* IAB-HD15-GPIO write (aka PI Consumer Output)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0549, 1, 0x0001, 0x0004, 12, 0) /* IAB-HD15-GPIO joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0549, 2, 0x000c, 0x0001, 3, 0) /* IAB-HD15-GPIO multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0549, 3, 0x0001, 0x0080, 2, 0) /* IAB-HD15-GPIO multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0549, 4, 0x0001, 0x0002, 7, 0) /* IAB-HD15-GPIO mouse*/
+	 
+	DEVICE_MAP_ENTRY(PI_VID, 0x054A, 0, 0x000c, 0x0001, 37, 36) /* IAB-HD15-GPIO read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054A, 1, 0x0001, 0x0006, 9, 2) /* IAB-HD15-GPIO keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054A, 2, 0x0001, 0x0002, 7, 0) /* IAB-HD15-GPIO mouse*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x054B, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054B, 1, 0x0001, 0x0006, 9, 2) /* XKE-40 keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054B, 2, 0x000c, 0x0001, 3, 0) /* XKE-40 multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054B, 3, 0x0001, 0x0080, 2, 0) /* XKE-40 multimedia*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x054C, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054C, 1, 0x0001, 0x0006, 9, 2) /* XKE-40 keyboard boot*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054C, 2, 0x000c, 0x0001, 3, 0) /* XKE-40 multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054C, 3, 0x0001, 0x0080, 2, 0) /* XKE-40 multimedia*/
+		 
+	DEVICE_MAP_ENTRY(PI_VID, 0x054D, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054D, 1, 0x0001, 0x0006, 9, 2) /* XKE-40 keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054D, 2, 0x0001, 0x0004, 12, 0) /* XKE-40joystick*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x054E, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054E, 1, 0x0001, 0x0002, 7, 0) /* XKE-40 mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054E, 2, 0x0001, 0x0004, 12, 0) /* XKE-40 joystick*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x054F, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054F, 1, 0x0001, 0x0006, 9, 2) /* XKE-40 keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x054F, 2, 0x0001, 0x0002, 7, 0) /* XKE-40 mouse*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0550, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0551, 0, 0x000c, 0x0001, 37, 36) /* XKE-40 read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0551, 1, 0x0001, 0x0006, 9, 2) /* XKE-40 keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0551, 2, 0x0001, 0x0004, 12, 0) /* XKE-40 joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0551, 3, 0x0001, 0x0002, 7, 0) /* XKE-40 mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0551, 4, 0x000c, 0x0001, 3, 0) /* XKE-40 multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0551, 5, 0x0001, 0x0080, 2, 0) /* XKE-40 multimedia*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0552, 0, 0x0001, 0x0006, 9, 2) /* XKE-40 keyboard boot (KVM)*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x053F, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x053F, 1, 0x0001, 0x0006, 9, 2) /* XBK-QWERTY keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x053F, 2, 0x000c, 0x0001, 3, 0) /* XBK-QWERTY multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x053F, 3, 0x0001, 0x0080, 2, 0) /* XBK-QWERTY multimedia*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0540, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0540, 1, 0x0001, 0x0006, 9, 2) /* XBK-QWERTY keyboard boot*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0540, 2, 0x000c, 0x0001, 3, 0) /* XBK-QWERTY multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0540, 3, 0x0001, 0x0080, 2, 0) /* XBK-QWERTY multimedia*/
+		 
+	DEVICE_MAP_ENTRY(PI_VID, 0x0541, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0541, 1, 0x0001, 0x0006, 9, 2) /* XBK-QWERTY keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0541, 2, 0x0001, 0x0004, 12, 0) /* XBK-QWERTY joystick*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0542, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0542, 1, 0x0001, 0x0002, 7, 0) /* XBK-QWERTY mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0542, 2, 0x0001, 0x0004, 12, 0) /* XBK-QWERTY joystick*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0543, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0543, 1, 0x0001, 0x0006, 9, 2) /* XBK-QWERTY keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0543, 2, 0x0001, 0x0002, 7, 0) /* XBK-QWERTY mouse*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0544, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0545, 0, 0x000c, 0x0001, 37, 36) /* XBK-QWERTY read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0545, 1, 0x0001, 0x0006, 9, 2) /* XBK-QWERTY keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0545, 2, 0x0001, 0x0004, 12, 0) /* XBK-QWERTY joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0545, 3, 0x0001, 0x0002, 7, 0) /* XBK-QWERTY mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0545, 4, 0x000c, 0x0001, 3, 0) /* XBK-QWERTY multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0545, 5, 0x0001, 0x0080, 2, 0) /* XBK-QWERTY multimedia*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0546, 0, 0x0001, 0x0006, 9, 2) /* XBK-QWERTY keyboard boot (KVM)*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0555, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0555, 1, 0x0001, 0x0006, 9, 2) /* XBK-4x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0555, 2, 0x000c, 0x0001, 3, 0) /* XBK-4x6 Module multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0555, 3, 0x0001, 0x0080, 2, 0) /* XBK-4x6 Module multimedia*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0556, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0556, 1, 0x0001, 0x0006, 9, 2) /* XBK-4x6 Module keyboard boot*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0556, 2, 0x000c, 0x0001, 3, 0) /* XBK-4x6 Module multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0556, 3, 0x0001, 0x0080, 2, 0) /* XBK-4x6 Module multimedia*/
+		 
+	DEVICE_MAP_ENTRY(PI_VID, 0x0557, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0557, 1, 0x0001, 0x0006, 9, 2) /* XBK-4x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0557, 2, 0x0001, 0x0004, 12, 0) /* XBK-4x6 Module joystick*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0558, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0558, 1, 0x0001, 0x0002, 7, 0) /* XBK-4x6 Module mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0558, 2, 0x0001, 0x0004, 12, 0) /* XBK-4x6 Module joystick*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0559, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0559, 1, 0x0001, 0x0006, 9, 2) /* XBK-4x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0559, 2, 0x0001, 0x0002, 7, 0) /* XBK-4x6 Module mouse*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x055A, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x055B, 0, 0x000c, 0x0001, 37, 36) /* XBK-4x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x055B, 1, 0x0001, 0x0006, 9, 2) /* XBK-4x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x055B, 2, 0x0001, 0x0004, 12, 0) /* XBK-4x6 Module joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x055B, 3, 0x0001, 0x0002, 7, 0) /* XBK-4x6 Module mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x055B, 4, 0x000c, 0x0001, 3, 0) /* XBK-4x6 Module multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x055B, 5, 0x0001, 0x0080, 2, 0) /* XBK-4x6 Module multimedia*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x055C, 0, 0x0001, 0x0006, 9, 2) /* XBK-4x6 Module keyboard boot (KVM)*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0574, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0574, 1, 0x0001, 0x0006, 9, 2) /* XBK-3x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0574, 2, 0x000c, 0x0001, 3, 0) /* XBK-3x6 Module multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0574, 3, 0x0001, 0x0080, 2, 0) /* XBK-3x6 Module multimedia*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0575, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0575, 1, 0x0001, 0x0006, 9, 2) /* XBK-3x6 Module keyboard boot*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0575, 2, 0x000c, 0x0001, 3, 0) /* XBK-3x6 Module multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0575, 3, 0x0001, 0x0080, 2, 0) /* XBK-3x6 Module multimedia*/
+		 
+	DEVICE_MAP_ENTRY(PI_VID, 0x0576, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0576, 1, 0x0001, 0x0006, 9, 2) /* XBK-3x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0576, 2, 0x0001, 0x0004, 12, 0) /* XBK-3x6 Module joystick*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x0577, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0577, 1, 0x0001, 0x0002, 7, 0) /* XBK-3x6 Module mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0577, 2, 0x0001, 0x0004, 12, 0) /* XBK-3x6 Module joystick*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0578, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0578, 1, 0x0001, 0x0006, 9, 2) /* XBK-3x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x0578, 2, 0x0001, 0x0002, 7, 0) /* XBK-3x6 Module mouse*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x0579, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+
+	DEVICE_MAP_ENTRY(PI_VID, 0x057A, 0, 0x000c, 0x0001, 37, 36) /* XBK-3x6 Module read and write (aka PI Consumer)*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x057A, 1, 0x0001, 0x0006, 9, 2) /* XBK-3x6 Module keyboard*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x057A, 2, 0x0001, 0x0004, 12, 0) /* XBK-3x6 Module joystick*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x057A, 3, 0x0001, 0x0002, 7, 0) /* XBK-3x6 Module mouse*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x057A, 4, 0x000c, 0x0001, 3, 0) /* XBK-3x6 Module multimedia*/
+	DEVICE_MAP_ENTRY(PI_VID, 0x057A, 5, 0x0001, 0x0080, 2, 0) /* XBK-3x6 Module multimedia*/
+	
+	DEVICE_MAP_ENTRY(PI_VID, 0x057B, 0, 0x0001, 0x0006, 9, 2) /* XBK-3x6 Module keyboard boot (KVM)*/
 };
 
 static bool get_usage(unsigned short vid, unsigned short pid,
