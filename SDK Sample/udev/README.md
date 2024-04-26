@@ -1,0 +1,1 @@
+This rules file should be added to the  /usr/lib/udev/ directory to allow software access to the raw HID messages and to address descriptor conflicts for the XK-24, XK-80, and XK-128.
