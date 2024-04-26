@@ -1,0 +1,3 @@
+
+# X-Keys
+SUBSYSTEM=="usb", ATTRS{idVendor}=="05f3", MODE="0666"
