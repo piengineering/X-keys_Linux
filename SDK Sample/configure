@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" == "--help" ]; then
+	echo "CMake configuration script. Parameters will be passed directly"
+	echo "to CMake by this script. For example:"
+	echo "  ./configure -D CMAKE_INSTALL_PREFIX=/usr "
+	echo "  ./configure -D CMAKE_BUILD_TYPE=Release "
+	echo "  ./configure -D LIB_SUFFIX=64 "
+	echo "Passing no parameters will give the default build."
+	exit 1
+fi
+
+
+mkdir build
+cd build && cmake $@ ..
+
