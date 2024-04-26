@@ -1,0 +1,28 @@
+SUBSYSTEM=="usb", ATTRS{idVendor}=="05f3", MODE="0666"
+SUBSYSTEM=="usb_device", ATTRS{idVendor}=="05f3", MODE="0666"
+
+#make sure that you use hex for vendor id
+
+# XK-24
+ACTION=="add|change", KERNEL=="event[0-9]*", \
+  ENV{ID_VENDOR_ID}=="05f3", \
+  ENV{ID_MODEL_ID}=="0405", \
+  ENV{ID_USB_INTERFACE_NUM}=="00", \
+  ENV{ID_INPUT_MOUSE}="", \
+  ENV{LIBINPUT_IGNORE_DEVICE}="1"
+
+# XK-80
+ACTION=="add|change", KERNEL=="event[0-9]*", \
+  ENV{ID_VENDOR_ID}=="05f3", \
+  ENV{ID_MODEL_ID}=="0441", \
+  ENV{ID_USB_INTERFACE_NUM}=="00", \
+  ENV{ID_INPUT_MOUSE}="", \
+  ENV{LIBINPUT_IGNORE_DEVICE}="1"
+
+# XK-128
+ACTION=="add|change", KERNEL=="event[0-9]*", \
+  ENV{ID_VENDOR_ID}=="05f3", \
+  ENV{ID_MODEL_ID}=="04ce", \
+  ENV{ID_USB_INTERFACE_NUM}=="00", \
+  ENV{ID_INPUT_MOUSE}="", \
+  ENV{LIBINPUT_IGNORE_DEVICE}="1"
