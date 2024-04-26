@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.5
-Name=X-Keys pietestgui
-TryExec=pietestgui
-Exec=pietestgui
-Icon=pietestgui
-Terminal=false
-Type=Application
-Categories=Qt;Development;System;
