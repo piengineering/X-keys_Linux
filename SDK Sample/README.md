@@ -78,9 +78,9 @@ directory prefix, you can can run:
 
 In order for /dev entries for X-Keys products to be readable by non-root
 users, a udev rule will need to be placed in /etc/udev/rules.d . A sample
-udev rule file is located in the udev folder. Simply copy this file to
+udev rule file is located in the X-keys Rules folder. Simply copy this file to
 /etc/udev/rules.d using:
 ```
-    sudo cp udev/90-xkeys.rules /etc/udev/rules.d/
+    sudo cp udev/61-xkeys.rules /etc/udev/rules.d/
 ```
 from this folder.
