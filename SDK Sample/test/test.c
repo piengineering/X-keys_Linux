@@ -44,7 +44,7 @@ int main(void)
 			unsigned int res = SetupInterfaceEx(handle);
 			if (res != 0) 
 			{
-				printf("Unabe to open device. err: %d\n", res);
+				printf("Unable to open device. err: %d\n", res);
 			}
 			break;
          	}
