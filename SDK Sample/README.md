@@ -27,7 +27,7 @@ and/or distro versions.
 
 #### Clone
 
-To acquire the souce code cloen the Xkeys repo and change into the cloned
+To acquire the source code clone the Xkeys repo and change into the cloned
 directory;
 
 ```
