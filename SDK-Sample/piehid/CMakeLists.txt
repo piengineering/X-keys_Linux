@@ -6,12 +6,13 @@
 # 2011-08-11
 ######################################################
 
-project(piehid)
+cmake_minimum_required(VERSION 3.9)
 
-cmake_minimum_required(VERSION 2.8.0)
-if(COMMAND cmake_policy)
-  cmake_policy(SET CMP0003 NEW)
-endif(COMMAND cmake_policy)
+project(piehid VERSION 1.0.0 DESCRIPTION "Xkeys API")
+
+#if(COMMAND cmake_policy)
+#  cmake_policy(SET CMP0003 NEW)
+#endif(COMMAND cmake_policy)
 
 if(DEFINED LIBDIRSUFFIX)
   set(LIB_SUFFIX ${LIBDIRSUFFIX})
@@ -42,9 +43,14 @@ ADD_DEFINITIONS()
 ADD_LIBRARY(piehid SHARED ${SRCS})
 ADD_LIBRARY(piehid_static STATIC ${SRCS})
 SET_TARGET_PROPERTIES(piehid_static PROPERTIES OUTPUT_NAME piehid)
-SET_TARGET_PROPERTIES(piehid PROPERTIES PUBLIC_HEADER PieHid32.h)
-#SET_TARGET_PROPERTIES(piehid PROPERTIES VERSION 1)
-SET_TARGET_PROPERTIES(piehid PROPERTIES SOVERSION 1)
+
+set_target_properties(${CMAKE_PROJECT_NAME}  PROPERTIES
+    VERSION ${PROJECT_VERSION}
+    SOVERSION 1
+    PUBLIC_HEADER PieHid32.h
+)
+
+configure_file(${CMAKE_PROJECT_NAME}.pc.in ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pc @ONLY)
 
 TARGET_LINK_LIBRARIES(
 	piehid
@@ -57,5 +63,7 @@ INSTALL(TARGETS piehid piehid_static
 	LIBRARY DESTINATION lib${LIB_SUFFIX}
 	ARCHIVE DESTINATION lib${LIB_SUFFIX}
 	PUBLIC_HEADER DESTINATION include )
+
+install(FILES ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.pc DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pkgconfig)
 
 
