@@ -516,11 +516,8 @@ MainWindow::keyboardReflectorClicked()
 void
 MainWindow::joystickReflectorClicked()
 {
-	if (!checkHandle())
-		return;
-
-	
-
+	if (checkHandle())
+	{
 		// Open up the game controller control panel to test these features,
 		// after clicking this button go and make active the control panel
 		// properties and change will occur.
@@ -555,8 +552,7 @@ MainWindow::joystickReflectorClicked()
 		if (result != 0) {
 			QMessageBox::critical(this, "Write Error", "Unable to write to Device.");
 		}
-	
-	
+	}
 }
 
 void
