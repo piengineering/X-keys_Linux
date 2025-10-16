@@ -1,0 +1,1 @@
+HID reports for all PI Engineering products can be found in the PI Engineering SDK repository https://github.com/piengineering/PI-Engineering-SDK/tree/main/Documentation or by downloading one of the compressed files here.
